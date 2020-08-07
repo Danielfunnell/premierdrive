@@ -1,0 +1,17 @@
+@mixin icon-vertical-align { //lines up icons
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top:-5px; 
+    margin-right:10px;
+}
+
+@mixin clear-float {
+    .clearfix {zoom: 1}
+    .clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    }
+}

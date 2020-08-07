@@ -1,0 +1,40 @@
+.testomonials-box {
+    width: 75%;
+    background-color: rgba(255,255,255,0.6);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    border-radius: 3px;
+    margin-bottom: 5rem;
+    vertical-align: middle;
+    transform: skewX(-10deg);
+
+
+    &__name {
+        text-align: left;
+        margin-left: 11rem;
+    }
+
+    &__picture  {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        vertical-align: middle;
+        float: left;
+        top:0;
+        left:0;
+        transform: skewX(10deg);
+        
+    }
+
+    &__blockquote {
+        line-height: 145%;
+        text-align: left;
+        margin-left: 10rem;
+        transform: skewX(10deg);
+    }
+
+}
+
+.testomonials-box:first-child {
+    margin-top: 2rem;
+}

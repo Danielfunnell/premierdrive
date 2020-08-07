@@ -1,0 +1,18 @@
+.hero {
+    background-image: linear-gradient(103deg,
+        rgba($color-secondary, .9999) 35%,
+        rgba($color-secondary, 0.8) 60%,
+        transparent 100%),url(img/driving-schools-ashford-hero.jpg);
+    height: 89vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%);
+
+    &__text-box {
+        float: left;
+        text-align: left;
+        margin-top: 5rem;
+        margin-left:5rem;
+    }
+}

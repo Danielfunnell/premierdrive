@@ -1,0 +1,38 @@
+.icon-container-contact {
+    position: relative;
+    padding: 3.125rem;
+    text-align: left;
+
+    &__icon {
+        position: absolute;
+        color: $primary;
+        font-size: 2rem;
+        line-height: 120%;
+        top:-.3rem;
+        left:0;
+
+    }
+
+    &__icon--mobile {
+        margin-left: .4rem;
+        position: absolute;
+        color: $primary;
+        font-size: 2rem;
+        line-height: 120%;
+        top:-.3rem;
+        left:0;
+    }
+
+    &__individual {
+        width:100%;
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
+    &__para {
+        margin-left: 3rem;
+        display: inline-block;
+    }
+
+}
+

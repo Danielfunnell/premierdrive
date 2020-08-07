@@ -1,0 +1,73 @@
+footer {
+    background-color: #2b303a;   
+    padding: 80px 0;
+    color:rgba(255, 255, 255, 0.726);
+    font-size: 80%;
+    position: relative;
+
+    
+
+
+.icon-small--footer {
+    color:rgba(255, 255, 255, 0.726);
+    float:left;
+    font-size: 200%;
+    /*line up icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top:-5px;
+    margin-right:1rem;
+}
+
+.icon-para {
+    display:block;
+}
+
+.contact-footer {
+    position: relative;
+    padding: .1rem;
+    text-align: left;
+
+    &__icon {
+        position: absolute;
+        font-size: 1.5rem;
+        line-height: 120%;
+        top:-.3rem;
+        left:0;
+
+    }
+
+    &__icon--mobile {
+        margin-left: .1rem;
+        position: absolute;
+        font-size: 1.5rem;
+        line-height: 120%;
+        top:-.3rem;
+        left:0;
+    }
+
+    &__individual {
+        width:100%;
+        position: relative;
+        margin-bottom: .5rem;
+    }
+
+    &__para {
+        margin-left: 1.5rem;
+        display: inline-block;
+    }
+
+    
+
+}
+
+    .footer__bottom {
+            background-color: #23272f;
+            position: absolute;
+            bottom:0;
+            right:0;
+            border-radius: 3px;
+            padding: 1rem 1rem;
+        }
+    
+}

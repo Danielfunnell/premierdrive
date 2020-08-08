@@ -9,10 +9,22 @@
     background-position: center;
     clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%);
 
+        
+
     &__text-box {
-        float: left;
-        text-align: left;
-        margin-top: 5rem;
-        margin-left:5rem;
+        margin-left: 2.5rem;
+        position: relative;
+        top: 45%;
+        transform: translateY(-50%);
+        
+        
+    }
+
+    &__text-box h1 {
+        font-size: 450%;
+
+        @include respond(phone) {
+            font-size: 525%;
+        }
     }
 }

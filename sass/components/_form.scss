@@ -1,12 +1,27 @@
 .form {
     background-color: $color-white;
-    padding: 3rem;
+    padding: 1rem;
     border-radius: 3px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     top:-4.5rem;
     left:0;
-    width: 90%;
+    width: 100;
     left: 0;
     z-index: 99;
     margin-bottom: 2rem;
+
+    @include respond(phone) {
+        padding: 3rem;
+        width: 90%;
+        
+    }
+
+    @include respond(tab-port) {
+        width:100%;
+        padding:1.5rem;
+    }
+
+    @include respond(desktop) {
+        width:90%;
+    }
 }

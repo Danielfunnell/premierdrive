@@ -1,15 +1,17 @@
 footer {
-    background-color: #2b303a;   
-    padding: 80px 0;
-    color:rgba(255, 255, 255, 0.726);
+    background-color: $color-secondary;   
+    padding: 4rem 1rem;
+    color: $color-silver;
     font-size: 80%;
     position: relative;
 
-    
+    @include respond(tab-land) { 
+        padding: 5rem 0;
+    }
 
 
 .icon-small--footer {
-    color:rgba(255, 255, 255, 0.726);
+    color: $color-silver;
     float:left;
     font-size: 200%;
     /*line up icons*/
@@ -27,6 +29,7 @@ footer {
     position: relative;
     padding: .1rem;
     text-align: left;
+    
 
     &__icon {
         position: absolute;
@@ -50,6 +53,13 @@ footer {
         width:100%;
         position: relative;
         margin-bottom: .5rem;
+        padding: 0 1rem;
+
+       
+    }
+
+    &__individual:first-child {
+        margin-top:1rem;
     }
 
     &__para {

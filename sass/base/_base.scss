@@ -7,7 +7,29 @@
 }
 
 html {
-    font-size: 62.5;
+
+    font-size: 80%; /*root font size. Default font size of browser is 16px. Always select in percentage so if user changes browser default it scales. So 10/16 = 62.5%. Easier to set 10px then 1 rem would = 10px.*/
+    scroll-behavior: auto;
+/*@include respond(phone) { Dont this query as it also applies for the tab-port as below 900px
+    font-size: 50%; 
+}*/ 
+
+@include respond(phone) {
+    font-size: 80%; //1rem =8px, 8/16 =50%
+}
+
+@include respond(tab-port) {
+    font-size: 85%; //1rem =8px, 8/16 =50%
+}
+
+@include respond(tab-land) { 
+    font-size: 90%;
+}
+
+
+@include respond(big-desktop) {
+    font-size: 100%; 
+}
 }
 
 body {
@@ -17,5 +39,5 @@ body {
     
 }
 
-section {padding-top: 80px;
+section {padding-top: 5rem;
 }

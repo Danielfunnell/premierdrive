@@ -28,37 +28,62 @@
 
 .why-us {
     text-align: center;
-    background-image: linear-gradient(130deg,
+    background-image: linear-gradient(180deg,
+        rgba($color-secondary, 0.9) 0%,
+        rgba($color-secondary, 0.9) 67%,
+        transparent 65%);
+    position: relative;
+    display:block;
+    
+    
+    
+    @include respond(tab-land) {
+        text-align: center;
+        background-image: linear-gradient(130deg,
         rgba($color-secondary, 0.9) 0%,
         rgba($color-secondary, 0.9) 52.9%,
         transparent 53%);
         position: relative;
-    
-
+    }
 
     &__icon-container {
-        margin-top: 40px;
+        text-align: center;
+        width:100%;
+        margin: 4rem 2rem;
+        
+
+        @include respond(tab-land) {
+            margin: 4rem 0;
+            width:100%;
+        }
     }
 
     &__icon-para {
         text-align: left;
         margin-left: 40px;
         margin-bottom: 1.75rem;
-        color: $color-silver;
-
-       
+        color: $color-silver; 
     }
+
 
     &__icon-para:last-child {
         padding-bottom: 5rem;
     }
 
     &__img {
-        border-radius: 13rem 0 0 0;
-        position: absolute;
-        bottom:0;
-        right:0;
-       
+        position: relative;
+        width:auto;
+        height: 20rem;
+        margin-top: 4rem;
+    
+        
+        @include respond(tab-land) {
+            border-radius: 13rem 0 0 0;
+            position: absolute;
+            bottom:0;
+            right:0;
+            height:auto;
+        }
     }
 
     &__heading {
@@ -68,18 +93,24 @@
 
 .pricing {
     background-color: $color-light-grey;
-    margin-bottom: 80px;
+    margin-bottom: 5rem;
+}
+
+#map {
+    height:20rem;
+    background-color: $color-white;
 }
 
 .contact-us {
     position: relative;
+    background-color: $color-white;
 }
 
 .section-contact-us__diagonal {
     background-color: #f7f8fc;
     top:20rem;
     left:0;
-    height:55rem;
+    height:57rem;
     position: absolute;
     width: 100%;
     clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);

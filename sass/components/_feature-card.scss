@@ -10,11 +10,15 @@
     margin-bottom: 1rem;
 
     @include respond(tab-port) {
-        height: 31rem;
+        height: 35rem;
+    }
+
+    @include respond(tab-land) {
+        height: 32rem;
     }
 
     @include respond(desktop) {
-        height: 29rem;
+        height: 30rem;
     }
 
     &__img {
@@ -22,15 +26,18 @@
         height: 15rem;
 
         @include respond(tab-port) {
-            height: 13rem;
+            height: 15rem;
         }
     }
     
     &__text-box {
         padding: 0.75rem 1.25rem;
-        border-top: solid 1px $color-white;
+        border-top: solid 2px $color-white;
         background-color: $color-light-grey;
         
+        @include respond(tab-port) {
+            border-top:none;
+        }
     }
 
     &__para-box {

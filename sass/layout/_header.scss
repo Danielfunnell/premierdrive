@@ -1,30 +1,78 @@
 .hero {
-    background-image: linear-gradient(103deg,
+    background-image: linear-gradient(180deg,
         rgba($color-secondary, .9999) 35%,
         rgba($color-secondary, 0.8) 60%,
-        transparent 100%),url(img/driving-schools-ashford-hero.jpg);
-    height: 89vh;
+        transparent 100%),url(img/road-220058_1280.jpg);
+    height: 95vh;
     position: relative;
     background-size: cover;
     background-position: center;
     clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%);
 
-        
+        @include respond(tab-port) {
+            background-image: linear-gradient(103deg,
+        rgba($color-secondary, .9999) 35%,
+        rgba($color-secondary, 0.8) 60%,
+        transparent 100%),url(img/driving-schools-ashford-hero.jpg);
+        height: 89vh;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%);
+        }
 
     &__text-box {
-        margin-left: 2.5rem;
-        position: relative;
-        top: 45%;
-        transform: translateY(-50%);
+        text-align:center;
+        top:7%;
+        color:$color-white;
+        position: absolute;
+        margin: 0 auto;
+        padding: 1rem;
         
         
+        @include respond(tab-port) {
+            text-align:left;
+            margin-left: 2rem;
+            width:60%;
+            position: relative;
+            top: 45%;
+            transform: translateY(-50%);
+        }
     }
 
     &__text-box h1 {
-        font-size: 450%;
-
+        font-size: 350%;
+    
         @include respond(phone) {
             font-size: 525%;
         }
+    }
+
+    &__sub-heading {
+        font-weight: 300;
+        font-size: 150%;
+        margin: 1rem 0;
+    }
+}
+
+.small-btn {
+    display:none;
+    opacity: 0;
+    visibility: hidden;
+    
+    @include respond(tab-port) {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.large-btn {
+    display:block;
+
+    @include respond(tab-port) {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
     }
 }

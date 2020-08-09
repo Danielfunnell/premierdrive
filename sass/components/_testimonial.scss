@@ -5,10 +5,11 @@
     padding: .5rem;
     border-radius: 3px;
     margin-bottom: 5rem;
+    height:auto;
     vertical-align: middle;
     
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
         width: 75%;
         padding: 1.5rem;
         vertical-align: middle;
@@ -16,10 +17,10 @@
     }
 
     &__name {
-        text-align: center;
+        text-align:right;
         
 
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             text-align: left;
             margin-left: 11rem;
         }
@@ -31,10 +32,11 @@
         border-radius: 50%;
         margin-right: .3rem;
         float: left;
-        top:0;
-        left:0;
+        shape-outside: circle();
+        margin: 1rem 1rem 1rem 0;
         
-        @include respond(tab-port) {
+        
+        @include respond(tab-land) {
             vertical-align: middle;
             transform: skewX(10deg);
         }
@@ -47,7 +49,7 @@
         
         
 
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             margin-left: 10rem;
             transform: skewX(10deg);
         }

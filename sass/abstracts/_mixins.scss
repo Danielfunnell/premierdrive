@@ -45,6 +45,9 @@
 */
 
 @mixin respond($breakpoint) {
+    @if $breakpoint == small-phone {
+        @media screen and (min-width: 23em) { @content };   //370px
+    }
     @if $breakpoint == phone {
         @media only screen and (min-width: 36em) { @content };  //576px //only screen use incase some wants to print out file so media query does not apply
     }

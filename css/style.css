@@ -253,18 +253,18 @@ h2:after {
 
 .hero {
   background-image: linear-gradient(180deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 60%, transparent 100%), url(img/road-220058_1280.jpg);
-  height: 95vh;
+  min-height: 115vh;
   position: relative;
   background-size: cover;
   background-position: center;
   clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%); }
+  @media screen and (min-width: 23em) {
+    .hero {
+      min-height: 90vh; } }
   @media screen and (min-width: 48em) {
     .hero {
       background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 60%, transparent 100%), url(img/driving-schools-ashford-hero.jpg);
-      height: 89vh;
-      position: relative;
-      background-size: cover;
-      background-position: center;
+      min-height: 89vh;
       clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%); } }
   .hero__text-box {
     text-align: center;
@@ -277,9 +277,15 @@ h2:after {
       .hero__text-box {
         text-align: left;
         margin-left: 2rem;
-        width: 60%;
+        padding-top: 12rem;
         position: relative;
-        top: 45%;
+        max-width: 85%; } }
+    @media screen and (min-width: 75em) {
+      .hero__text-box {
+        max-width: 60%;
+        position: absolute;
+        margin: 2;
+        top: 30%;
         transform: translateY(-50%); } }
   .hero__text-box h1 {
     font-size: 350%; }

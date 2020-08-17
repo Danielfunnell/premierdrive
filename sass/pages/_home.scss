@@ -44,6 +44,9 @@
     position: relative;
     display:block;
     
+    animation-name: jsamin1; /*calls the keyframe*/
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
     
     
     @include respond(tab-land) {
@@ -100,6 +103,8 @@
     }
 }
 
+
+
 .pricing {
     background-color: $color-light-grey;
     margin-bottom: 5rem;
@@ -124,3 +129,4 @@
     width: 100%;
     clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
 }
+

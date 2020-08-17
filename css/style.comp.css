@@ -450,6 +450,14 @@ footer {
   .why-us__heading {
     color: rgba(255, 255, 255, 0.726); }
 
+@keyframes jsanim {
+  from {
+    transform: translateY(-100px);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+
 .pricing {
   background-color: #f7f8fc;
   margin-bottom: 5rem; }

@@ -1,6 +1,7 @@
 const questDiv= document.getElementById("question-container");
 const resultsContainer = document.getElementById("results");
 
+
 let score = [];
 let occurances = {};
 let curNumber;
@@ -8,7 +9,7 @@ let maxNumber = score[0];
 
 //document.getElementById("btn-start").addEventListener("click", start);
 document.getElementById("next").addEventListener("click", nextQuest);
-document.getElementById("submit").addEventListener("click", getResults);
+let submit = document.getElementById("submit").addEventListener("click", getResults);
 
 let questions = [
     {
@@ -20,66 +21,58 @@ let questions = [
     {
         question: "Are you a quick learner?",
         choiceA: "No",
-        choiceB:  "Not sure", 
+        choiceB: "Not sure", 
         choiceC: "Yes"
      },
      {
-        question: "Test",
+        question: "Have you done a practical test before",
         choiceA: "No",
-        choiceB:  "Not sure", 
+        choiceB: "Over a year ago", 
+        choiceC: "Yes"
+    },
+    {
+        question: "Do you have your own car to practice in as well?",
+        choiceA: "No",
+        choiceB: "Maybe",
         choiceC: "Yes"
     }
 ];
 
 let lastQuestionIndex = questions.length -1; 
 let runningQuestionIndex = 0;
-// 
 
-//  });
-
-// function start(){
-        
-// }
 
 renderQuestion()
 
 
 function renderQuestion() {
-    //for(i = 0; i < questions.length; i++) {
-    //let quest = questions[i].question
-
-    // questions.forEach(function(questions, index) {
-    //          questDiv.innerHTML += `<h4> ${index} ${questions.question} </h4> <label><input type="radio">${questions.choices}</label>`
-    
-        
-    // })
-
-
-            // questDiv.innerHTML += `<h4> ${questions[0].question} </h4>`;
-            // questDiv.innerHTML += ` <label><input type="radio" name="answer-btn" id="beginner" value="start">${questions[0].choices[0]}</label>`;
-            // questDiv.innerHTML += ` <label><input type="radio" name="answer-btn" id="intermediate" value="middle">${questions[0].choices[1]}</label>`;
-            // questDiv.innerHTML += ` <label><input type="radio" name="answer-btn" id="advance" value="end">${questions[0].choices[2]}</label>`;
+   
         let q = questions[runningQuestionIndex];
         questDiv.innerHTML += `<h4> ${q.question} </h4>`;
-        questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="A" value="start">${q.choiceA}</label>`
-        questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="B" value="middle">${q.choiceB}</label>`
-        questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label>`
+        questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="A" value="start">${q.choiceA}</label></br>`
+        questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="B" value="middle">${q.choiceB}</label><br>`
+        questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label><br>`
          
 };
 
 
 
-// runningQuestionIndex++;
-// renderQuestion();
-
 
 function nextQuest(){
-    if (runningQuestionIndex === lastQuestionIndex) {
+    if (runningQuestionIndex === lastQuestionIndex-1) {
+        
+        document.querySelector('#submit').textContent = 'Finish';
         console.log("end quiz")
+        
+    } if (runningQuestionIndex === lastQuestionIndex) {
+        document.getElementById("question-container").style.display='none';
+        document.getElementById("submit").style.display='none'
         getScore();
-    } else
+    }
+    else {
         runningQuestionIndex++;
         renderQuestion();
+    }
 }    
 
 
@@ -88,13 +81,13 @@ function nextQuest(){
  function getResults() {
    document.getElementsByName("answer-btn")
     .forEach(radio => {
-            if ((radio.checked) && (radio.value == "start")) {
+            if ((radio.checked) && (radio.value === "start")) {
                 score.push(radio.value); 
                 nextQuest()
-            } else if ((radio.checked) && (radio.value == "middle")) {
+            } else if ((radio.checked) && (radio.value === "middle")) {
                 score.push(radio.value);
                 nextQuest()
-            } else if ((radio.checked) && (radio.value == "end")) {
+            } else if ((radio.checked) && (radio.value === "end")) {
                 score.push(radio.value);
                 nextQuest()
                 console.log(score)
@@ -128,17 +121,22 @@ for(let i = 0; i < score.length; i++) {
         maxNumber = curNumber;
     }
 }
+    console.log(curNumber);
+    console.log(maxNumber);
     displayResult();
 };
 
 
 function displayResult() {
     if (curNumber == "start") {
+        resultsContainer.innerHTML =`<h4> You are a beginner. We recommend our 40 hour beginner course </h4>`;
         console.log("you are a beginner");
     } if (curNumber == "middle") {
+        resultsContainer.innerHTML =`<h4> You are a intermediate. We recommend our 20 hour course </h4>`;
         console.log("you are intermediate");
     }
     else if (curNumber == "end") {
+        resultsContainer.innerHTML =`<h4> You are advanced. We recommend our 10 hour course </h4>`;
         console.log("you are advanced");
     } 
 }

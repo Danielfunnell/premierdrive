@@ -1,7 +1,10 @@
 const questDiv= document.getElementById("question-container");
 const resultsContainer = document.getElementById("results");
 
-let score = 0;
+let score = [];
+let occurances = {};
+let curNumber;
+let maxNumber = score[0];
 
 //document.getElementById("btn-start").addEventListener("click", start);
 document.getElementById("next").addEventListener("click", nextQuest);
@@ -86,13 +89,13 @@ function nextQuest(){
    document.getElementsByName("answer-btn")
     .forEach(radio => {
             if ((radio.checked) && (radio.value == "start")) {
-            score = score +1;  
-            nextQuest()
+                score.push(radio.value); 
+                nextQuest()
             } else if ((radio.checked) && (radio.value == "middle")) {
-            score = score +2;
-            nextQuest()
+                score.push(radio.value);
+                nextQuest()
             } else if ((radio.checked) && (radio.value == "end")) {
-                score = score +3;
+                score.push(radio.value);
                 nextQuest()
                 console.log(score)
             }
@@ -100,12 +103,43 @@ function nextQuest(){
 };
 
 
-    function getScore () {
-        if(score <= 3) {
-            console.log("your a beginner")
-        } else if (score <= 6) {
-            console.log("your an intermediate")
-        } else if (score > 6) {
-            console.log("Your advanced")
-        }
+    // function getScore () {
+    //     if(score <= 3) {
+    //         console.log("your a beginner")
+    //     } else if (score <= 6) {
+    //         console.log("your an intermediate")
+    //     } else if (score > 6) {
+    //         console.log("Your advanced")
+    //     }
+    // }
+
+
+
+function getScore() {
+for(let i = 0; i < score.length; i++) {
+    curNumber = score[i];
+
+    if(occurances[curNumber] !== undefined) {
+        occurances[curNumber]++;
+    } else {
+        occurances[curNumber] = 1;
     }
+    if(occurances[curNumber] > occurances[maxNumber]) {
+        maxNumber = curNumber;
+    }
+}
+    displayResult();
+};
+
+
+function displayResult() {
+    if (curNumber == "start") {
+        console.log("you are a beginner");
+    } if (curNumber == "middle") {
+        console.log("you are intermediate");
+    }
+    else if (curNumber == "end") {
+        console.log("you are advanced");
+    } 
+}
+

@@ -34,7 +34,7 @@ let submit = document.getElementById("submit").addEventListener("click", getResu
 let questions = [
     {
         question: "How many hours have you had?",
-        choiceA: "0-15 hours", 
+        choiceA: "0-15 hours",  
         choiceB: "15-30",
         choiceC: "30-above",
     },
@@ -60,11 +60,18 @@ let questions = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
 console.log(questions)
 
 let lastQuestionIndex = questions.length -1; 
 
+<<<<<<< HEAD
 let runningQuestionIndex = 1;
+=======
+let runningQuestionIndex = 0;
+>>>>>>> origin/master
 
 
 
@@ -77,6 +84,7 @@ function quizStart (event) {
 
 }
 
+<<<<<<< HEAD
 function renderQuestionOne() {
 
     next.style.display='block';
@@ -115,6 +123,8 @@ function getResultsOne() {
         
              
 }); 
+=======
+>>>>>>> origin/master
 
 
 function renderQuestion() {
@@ -122,6 +132,7 @@ function renderQuestion() {
        
         next.style.display='block';
         
+<<<<<<< HEAD
 =======
 let lastQuestionIndex = questions.length -1; 
 let runningQuestionIndex = 0;
@@ -142,6 +153,8 @@ renderQuestion()
 
 function renderQuestion() {
 >>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
+=======
+>>>>>>> origin/master
    
         let q = questions[runningQuestionIndex];
         questDiv.innerHTML += `<h4> ${q.question} </h4>`;
@@ -153,12 +166,16 @@ function renderQuestion() {
         
         
         
+<<<<<<< HEAD
 =======
          
 >>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
 =======
          
 >>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
+=======
+        
+>>>>>>> origin/master
 };
 
 
@@ -197,6 +214,7 @@ function nextQuest(){
             } else if ((radio.checked) && (radio.value === "middle")) {
                 score ++
                
+<<<<<<< HEAD
 =======
                 score.push(radio.value); 
                 nextQuest()
@@ -209,12 +227,17 @@ function nextQuest(){
             } else if ((radio.checked) && (radio.value === "middle")) {
                 score.push(radio.value);
 >>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
+=======
+>>>>>>> origin/master
                 nextQuest()
             } else if ((radio.checked) && (radio.value === "end")) {
                 score.push(radio.value);
                 nextQuest()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
                
                 
 =======

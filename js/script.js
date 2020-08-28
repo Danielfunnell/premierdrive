@@ -5,13 +5,15 @@ let formOne = document.getElementById("form").addEventListener("submit", handlef
 function handleform(event) {
     event.preventDefault();
     form.parentNode.removeChild(form);
-    renderQuestion();
+    renderQuestionOne();
 }
 
 const next= document.querySelector(".next-button");
-const submit = document.getElementById("submit").addEventListener("click", getResults);
+const submitTwo= document.getElementById("submitTwo").addEventListener("click", getResults)
+const submit = document.getElementById("submit").addEventListener("click", getResultsOne);
 
 let score = 0
+
 let occurances = {};
 let curNumber;
 // let maxNumber = score[0];
@@ -28,7 +30,7 @@ let questions = [
         question: "How many hours have you had?",
         choiceA: "0-15 hours", 
         choiceB: "15-30",
-        choiceC: "30-above"
+        choiceC: "30-above",
     },
     {
         question: "Are you a quick learner?",
@@ -50,27 +52,68 @@ let questions = [
     }
 ];
 
+console.log(questions)
 
 let lastQuestionIndex = questions.length -1; 
-let runningQuestionIndex = 0;
-const questOne = questions[1];
+
+let runningQuestionIndex = 1;
+
+
+
 
 quizStart();
     
 function quizStart (event) {
-    //  event.preventDefault()
-   
+    
     next.style.display='none';
 
 }
-//renderQuestion();
+
+function renderQuestionOne() {
+
+    next.style.display='block';
+    let q1 = questions[0]
+
+    questDiv.innerHTML += `<h4 class="question-box__question my-0 font-weight-normal"> ${q1.question} </h4>`;
+    questDiv.innerHTML += `<label><input type="radio" name="q1-btn" value="a">${q1.choiceA}</label></br>`
+    questDiv.innerHTML += `<label><input type="radio" name="q1-btn" value="b">${q1.choiceB}</label><br>`
+    questDiv.innerHTML += `<label><input type="radio" name="q1-btn" value="c">${q1.choiceC}</label><br>`
+    
+    getResultsOne()
+    
+
+}
+
+function getResultsOne() {
+    document.getElementsByName("q1-btn")
+     .forEach(radio => {
+            
+        if ((radio.checked) && (radio.value === "a")) {
+            console.log(radio.value)
+            score = score+0; 
+            console.log(score)
+            renderQuestion()
+          
+        } else if ((radio.checked) && (radio.value === "b")) {
+            score = score +15;
+            renderQuestion()
+           
+        } else if ((radio.checked) && (radio.value === "c")) {
+            score = score +30;
+            renderQuestion()
+           
+        }
+
+        
+             
+}); 
 
 
 function renderQuestion() {
         
        
         next.style.display='block';
-    
+        
    
         let q = questions[runningQuestionIndex];
         questDiv.innerHTML += `<h4 class="question-box__question my-0 font-weight-normal"> ${q.question} </h4>`;
@@ -79,8 +122,8 @@ function renderQuestion() {
         questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label><br>`
         
         
+        
 };
-
 
 
 
@@ -96,8 +139,10 @@ function nextQuest(){
         displayResult();
     }
     else {
+        questDiv.innerHTML=""
         runningQuestionIndex++;
         renderQuestion();
+        
     }
 }    
 
@@ -111,16 +156,16 @@ function nextQuest(){
         
             if ((radio.checked) && (radio.value === "start")) {
                 score = score -1; 
-                console.log(score)
+              
                 nextQuest()
             } else if ((radio.checked) && (radio.value === "middle")) {
                 score ++
-                console.log(score)
+               
                 nextQuest()
             } else if ((radio.checked) && (radio.value === "end")) {
                 score = score +1
                 nextQuest()
-                console.log(score)
+               
                 
             }
 
@@ -179,4 +224,5 @@ function displayResult() {
         console.log("you are advanced");
     } 
 }
+};
 

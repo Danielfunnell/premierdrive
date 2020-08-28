@@ -1,7 +1,7 @@
 const questDiv= document.getElementById("question-container");
 const resultsContainer = document.getElementById("results");
-let formOne = document.getElementById("form").addEventListener("submit", handleform)
 
+<<<<<<< HEAD
 function handleform(event) {
     event.preventDefault();
     form.parentNode.removeChild(form);
@@ -14,16 +14,17 @@ const submit = document.getElementById("submit").addEventListener("click", getRe
 
 let score = 0
 
+=======
+
+let score = [];
+>>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
 let occurances = {};
 let curNumber;
-// let maxNumber = score[0];
-
+let maxNumber = score[0];
 
 //document.getElementById("btn-start").addEventListener("click", start);
-//document.getElementById("next").addEventListener("click", nextQuest);
-// form.addEventListener("click", renderQuestion);
-
-
+document.getElementById("next").addEventListener("click", nextQuest);
+let submit = document.getElementById("submit").addEventListener("click", getResults);
 
 let questions = [
     {
@@ -47,11 +48,12 @@ let questions = [
     {
         question: "Do you have your own car to practice in as well?",
         choiceA: "No",
-        choiceB: "Occasionally",
+        choiceB: "Maybe",
         choiceC: "Yes"
     }
 ];
 
+<<<<<<< HEAD
 console.log(questions)
 
 let lastQuestionIndex = questions.length -1; 
@@ -114,15 +116,29 @@ function renderQuestion() {
        
         next.style.display='block';
         
+=======
+let lastQuestionIndex = questions.length -1; 
+let runningQuestionIndex = 0;
+
+
+renderQuestion()
+
+
+function renderQuestion() {
+>>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
    
         let q = questions[runningQuestionIndex];
-        questDiv.innerHTML += `<h4 class="question-box__question my-0 font-weight-normal"> ${q.question} </h4>`;
+        questDiv.innerHTML += `<h4> ${q.question} </h4>`;
         questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="A" value="start">${q.choiceA}</label></br>`
         questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="B" value="middle">${q.choiceB}</label><br>`
         questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label><br>`
+<<<<<<< HEAD
         
         
         
+=======
+         
+>>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
 };
 
 
@@ -136,7 +152,7 @@ function nextQuest(){
     } if (runningQuestionIndex === lastQuestionIndex) {
         document.getElementById("question-container").style.display='none';
         document.getElementById("submit").style.display='none'
-        displayResult();
+        getScore();
     }
     else {
         questDiv.innerHTML=""
@@ -152,29 +168,33 @@ function nextQuest(){
  function getResults() {
    document.getElementsByName("answer-btn")
     .forEach(radio => {
-           
-        
             if ((radio.checked) && (radio.value === "start")) {
+<<<<<<< HEAD
                 score = score -1; 
               
                 nextQuest()
             } else if ((radio.checked) && (radio.value === "middle")) {
                 score ++
                
+=======
+                score.push(radio.value); 
+                nextQuest()
+            } else if ((radio.checked) && (radio.value === "middle")) {
+                score.push(radio.value);
+>>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
                 nextQuest()
             } else if ((radio.checked) && (radio.value === "end")) {
-                score = score +1
+                score.push(radio.value);
                 nextQuest()
+<<<<<<< HEAD
                
                 
+=======
+                console.log(score)
+>>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
             }
-
-            
         });
-
-        
 };
-
 
 
     // function getScore () {
@@ -189,37 +209,34 @@ function nextQuest(){
 
 
 
-// function getScore() {
-// for(let i = 0; i < score.length; i++) {
-//     curNumber = score[i];
+function getScore() {
+for(let i = 0; i < score.length; i++) {
+    curNumber = score[i];
 
-//     if(occurances[curNumber] !== undefined) {
-//         occurances[curNumber]++;
-//     } else {
-//         occurances[curNumber] = 1;
-//     }
-//     if(occurances[curNumber] > occurances[maxNumber]) {
-//         maxNumber = curNumber;
-//     }
-// }
-
-
-//     displayResult();
-// };
-
-
+    if(occurances[curNumber] !== undefined) {
+        occurances[curNumber]++;
+    } else {
+        occurances[curNumber] = 1;
+    }
+    if(occurances[curNumber] > occurances[maxNumber]) {
+        maxNumber = curNumber;
+    }
+}
+    console.log(curNumber);
+    console.log(maxNumber);
+    displayResult();
+};
 
 
 function displayResult() {
-
-    if (score < 0) {
+    if (curNumber == "start") {
         resultsContainer.innerHTML =`<h4> You are a beginner. We recommend our 40 hour beginner course </h4>`;
         console.log("you are a beginner");
-    }else if ((score >= 0) && (score <= 3)) {
+    } if (curNumber == "middle") {
         resultsContainer.innerHTML =`<h4> You are a intermediate. We recommend our 20 hour course </h4>`;
         console.log("you are intermediate");
     }
-    else if (score >= 4) {
+    else if (curNumber == "end") {
         resultsContainer.innerHTML =`<h4> You are advanced. We recommend our 10 hour course </h4>`;
         console.log("you are advanced");
     } 

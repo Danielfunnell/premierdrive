@@ -2,6 +2,7 @@ const questDiv= document.getElementById("question-container");
 const resultsContainer = document.getElementById("results");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function handleform(event) {
     event.preventDefault();
     form.parentNode.removeChild(form);
@@ -14,6 +15,10 @@ const submit = document.getElementById("submit").addEventListener("click", getRe
 
 let score = 0
 
+=======
+
+let score = [];
+>>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
 =======
 
 let score = [];
@@ -53,6 +58,7 @@ let questions = [
     }
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log(questions)
 
@@ -126,6 +132,16 @@ renderQuestion()
 
 function renderQuestion() {
 >>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
+=======
+let lastQuestionIndex = questions.length -1; 
+let runningQuestionIndex = 0;
+
+
+renderQuestion()
+
+
+function renderQuestion() {
+>>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
    
         let q = questions[runningQuestionIndex];
         questDiv.innerHTML += `<h4> ${q.question} </h4>`;
@@ -133,9 +149,13 @@ function renderQuestion() {
         questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="B" value="middle">${q.choiceB}</label><br>`
         questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label><br>`
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         
         
+=======
+         
+>>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
 =======
          
 >>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
@@ -170,6 +190,7 @@ function nextQuest(){
     .forEach(radio => {
             if ((radio.checked) && (radio.value === "start")) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 score = score -1; 
               
                 nextQuest()
@@ -182,13 +203,23 @@ function nextQuest(){
             } else if ((radio.checked) && (radio.value === "middle")) {
                 score.push(radio.value);
 >>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
+=======
+                score.push(radio.value); 
+                nextQuest()
+            } else if ((radio.checked) && (radio.value === "middle")) {
+                score.push(radio.value);
+>>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
                 nextQuest()
             } else if ((radio.checked) && (radio.value === "end")) {
                 score.push(radio.value);
                 nextQuest()
 <<<<<<< HEAD
+<<<<<<< HEAD
                
                 
+=======
+                console.log(score)
+>>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit
 =======
                 console.log(score)
 >>>>>>> parent of a00a6d2... updated course finder application, added name and email form and stopped page reloading on submit

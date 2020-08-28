@@ -26,9 +26,9 @@ let curNumber;
 let questions = [
     {
         question: "How many hours have you had?",
-        choiceA: "0-15 hours", 
+        choiceA: "0-15 hours",  
         choiceB: "15-30",
-        choiceC: "30-above"
+        choiceC: "30-above",
     },
     {
         question: "Are you a quick learner?",
@@ -50,27 +50,30 @@ let questions = [
     }
 ];
 
+console.log(questions)
 
 let lastQuestionIndex = questions.length -1; 
+
 let runningQuestionIndex = 0;
-const questOne = questions[1];
+
+
+
 
 quizStart();
     
 function quizStart (event) {
-    //  event.preventDefault()
-   
+    
     next.style.display='none';
 
 }
-//renderQuestion();
+
 
 
 function renderQuestion() {
         
        
         next.style.display='block';
-    
+        
    
         let q = questions[runningQuestionIndex];
         questDiv.innerHTML += `<h4 class="question-box__question my-0 font-weight-normal"> ${q.question} </h4>`;
@@ -79,8 +82,8 @@ function renderQuestion() {
         questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label><br>`
         
         
+        
 };
-
 
 
 
@@ -96,8 +99,10 @@ function nextQuest(){
         displayResult();
     }
     else {
+        questDiv.innerHTML=""
         runningQuestionIndex++;
         renderQuestion();
+        
     }
 }    
 
@@ -111,16 +116,16 @@ function nextQuest(){
         
             if ((radio.checked) && (radio.value === "start")) {
                 score = score -1; 
-                console.log(score)
+              
                 nextQuest()
             } else if ((radio.checked) && (radio.value === "middle")) {
                 score ++
-                console.log(score)
+               
                 nextQuest()
             } else if ((radio.checked) && (radio.value === "end")) {
                 score = score +1
                 nextQuest()
-                console.log(score)
+               
                 
             }
 

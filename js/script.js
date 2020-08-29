@@ -1,5 +1,7 @@
 const questDiv= document.getElementById("question-container");
+const questionBox= document.querySelector(".question-box")
 const resultsContainer = document.getElementById("results");
+
 let formOne = document.getElementById("form").addEventListener("submit", handleform)
 
 function handleform(event) {
@@ -10,10 +12,12 @@ function handleform(event) {
 
 const next= document.querySelector(".next-button");
 const submit = document.getElementById("submit").addEventListener("click", getResults);
+const bullets= [...document.querySelectorAll(".question-box__bullet")];
+console.log(bullets)
 
-let score = 0
-let occurances = {};
-let curNumber;
+
+
+
 // let maxNumber = score[0];
 
 
@@ -50,10 +54,13 @@ let questions = [
     }
 ];
 
-
+let score = 0
+let maxSteps = questions.length;
+let currentStep = 1;
 let lastQuestionIndex = questions.length -1; 
 let runningQuestionIndex = 0;
 const questOne = questions[1];
+
 
 quizStart();
     
@@ -61,22 +68,27 @@ function quizStart (event) {
     //  event.preventDefault()
    
     next.style.display='none';
-
+    questionBox.style.display = 'none'
+    
 }
 //renderQuestion();
 
 
 function renderQuestion() {
         
+        questionBox.style.display = 'block';
+        next.style.display ='block';
+
        
-        next.style.display='block';
+        
     
-   
+
+
         let q = questions[runningQuestionIndex];
-        questDiv.innerHTML += `<h4 class="question-box__question my-0 font-weight-normal"> ${q.question} </h4>`;
-        questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="A" value="start">${q.choiceA}</label></br>`
-        questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="B" value="middle">${q.choiceB}</label><br>`
-        questDiv.innerHTML += `<label><input type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label><br>`
+        questDiv.innerHTML += `<h4 class="question-box__question"> ${q.question} </h4>`;
+        questDiv.innerHTML += `<label><input class="input-btn" type="radio" name="answer-btn" id="A" value="start">${q.choiceA}</label></br>`
+        questDiv.innerHTML += `<label><input class="input-btn" type="radio" name="answer-btn" id="B" value="middle">${q.choiceB}</label><br>`
+        questDiv.innerHTML += `<label><input class="input-btn" type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label><br>`
         
         
 };
@@ -94,12 +106,14 @@ function nextQuest(){
         document.getElementById("question-container").style.display='none';
         document.getElementById("submit").style.display='none'
         displayResult();
+        bullets[3].classList.add("last");
     }
     else {
         questDiv.innerHTML=""
         runningQuestionIndex++;
+        currentStep++
         renderQuestion();
-        
+        bullets[currentStep -2].classList.add("completed");
     }
 }    
 

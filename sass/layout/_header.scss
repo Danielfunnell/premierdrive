@@ -4,7 +4,7 @@
         rgba($color-secondary, 0.8) 60%,
         transparent 100%),url(img/road-220058_1280.jpg);
         
-    min-height: 115vh;
+    height: 89vh;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -51,7 +51,7 @@
     }
 
     &__text-box h1 {
-        font-size: 350%;
+        font-size: 275%;
     
         @include respond(tab-port) {
             font-size: 525%;
@@ -60,7 +60,7 @@
 
     &__sub-heading {
         font-weight: 300;
-        font-size: 150%;
+        font-size: 125%;
         margin: 1rem 0;
     }
 }

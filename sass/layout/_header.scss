@@ -8,7 +8,7 @@
     position: relative;
     background-size: cover;
     background-position: center;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%);
+    clip-path: polygon(38% 0%, 0% 17%, 0% 78%, 33% 99%, 99% 99%, 99% 1%);
 
         @include respond(small-phone) {
         height: 80vh;
@@ -20,7 +20,7 @@
         rgba($color-secondary, .9999) 35%,
         rgba($color-secondary, 0.8) 60%,
         transparent 100%),url(img/driving-schools-ashford-hero.jpg);
-        min-height: 80vh;
+        min-height: 89vh;
         clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%);
         }
 

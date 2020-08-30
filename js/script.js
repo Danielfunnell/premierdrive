@@ -79,17 +79,11 @@ function renderQuestion() {
         questionBox.style.display = 'block';
         next.style.display ='block';
 
-       
-        
-    
-
-
         let q = questions[runningQuestionIndex];
         questDiv.innerHTML += `<h4 class="question-box__question"> ${q.question} </h4>`;
         questDiv.innerHTML += `<label><input class="input-btn" type="radio" name="answer-btn" id="A" value="start">${q.choiceA}</label></br>`
         questDiv.innerHTML += `<label><input class="input-btn" type="radio" name="answer-btn" id="B" value="middle">${q.choiceB}</label><br>`
-        questDiv.innerHTML += `<label><input class="input-btn" type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label><br>`
-        
+        questDiv.innerHTML += `<label><input class="input-btn" type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label><br>`        
         
 };
 

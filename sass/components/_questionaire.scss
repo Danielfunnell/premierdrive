@@ -1,6 +1,13 @@
 .survey-signup {
-    width: 50%;
-    margin: 5rem auto;
+    width: 100%;
+    margin: 3rem auto;
+
+    
+    @include respond(tab-land) {
+        width:60%;
+        padding:1.5rem;
+    }
+
 }
 
 .input-btn {
@@ -11,23 +18,29 @@
 
 .question-box {
     
-    width: 50%;
+    width: 100%;
     margin: 5rem auto;
-    
-    
+
+    @include respond(tab-land) {
+        width:60%;
+        padding:1.5rem;
+    }
+
     &__question{
         margin-bottom: 1rem;
         
     }
 
     &__progress-bar{
+
         display:flex;
-        width: 300px;
-        margin: 0 auto;
-        margin-bottom: 40px;
+        width: 100%;
+        margin: 2rem auto;
         justify-content: space-between;
         align-items: flex-end;
         position: relative;
+
+
     }
 
     &__step{
@@ -45,7 +58,7 @@
         color: $color-dark-grey;
         display: inline-block;
         position: relative;
-        transition: background-color 500ms;
+        transition: background-color .2s ease-out;
         
 
     }
@@ -56,8 +69,12 @@
         width:3rem;
         height:.1rem;
         background-color: $color-mid-grey;
-        bottom: 1rem;
-        margin-left:.3rem;
+        bottom: .9rem;
+        margin-left:.2rem;
+
+        @include respond(tab-land) {
+            width:5.1rem;
+        }
         
        
     }
@@ -75,15 +92,20 @@
         width:3rem;
         height:.1rem;
         background-color: $primary;
-        bottom: 1rem;
+        bottom: .9rem;
         right:-3.3rem;
         z-index:999;
+
+        @include respond(tab-land) {
+            width:5.1rem;
+            right:-5.3rem;
+        }
     }
 
     &__bullet.last{
         color: $color-white;
         background-color: $primary;
-        
+        border: 2px solid $primary;
     }
 
     &__container {
@@ -102,8 +124,21 @@
         margin-bottom:1rem;
     }
 
-    
-    
-    
-    
+    &__side {
+        background-color: $color-light-grey;
+        padding: 1rem;
+        border-radius: .7rem;
+       
+        
+       
+
+        @include respond(tab-land) {
+            position: absolute;
+            width: 75%;
+            top: 7rem;
+            left: -7rem;
+        }
+    }
+
 }
+

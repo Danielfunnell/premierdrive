@@ -10,6 +10,7 @@ footer {
     }
 
 
+
 .icon-small--footer {
     color: $color-silver;
     float:left;
@@ -80,4 +81,13 @@ footer {
             padding: 1rem 1rem;
         }
     
+}
+
+footer h5 {
+    border-bottom: 1px solid darken($color-silver, 50%);
+    padding-bottom: 1rem;
+
+    @include respond(tab-land) { 
+        border-bottom: none;
+    }
 }

@@ -17,39 +17,41 @@
     <body>
 
         <header>
-            <nav class="navbar navbar-expand-lg  navbar-light bg-light">
-                <a class="navbar-brand" href="#"><img src="/img/premier-drive-driving-school-retina.png" alt="logo" class="navbar__logo"></a>
+            <nav class="navbar navbar-expand-lg  navbar-light bg-light ml-4 mr-4">
+                <a class="navbar-brand" href="index.html"><img src="/img/premier-drive-driving-school-retina.png" alt="logo" class="navbar__logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
               
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Driving Lessons
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Our driving lessons</a>
+                          <a class="dropdown-item" href="#">Our prices</a>
+                          <a class="dropdown-item" href="#">The driving test</a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                      <a class="nav-link dropdown-toggle custom" href="intensive-courses.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Intensive Courses
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
+                        <a class="dropdown-item" href="intensive-courses.html">Our intensives</a>
+                        <a class="dropdown-item" href="#">Course prices</a>
+                        <a class="dropdown-item" href="#">FAQs</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
+                        <a class="nav-link custom" href="#">Book Online</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link custom" href="#contact-us">Contact Us</a>
+                      </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
+                 
                 </div>
               </nav>
 
@@ -59,8 +61,18 @@
             
         <section class="hero no-padding-top">
             <div class="hero__text-box">
-                <h1 class="display-3">Intensive driving course specialists</h1>
-                <h3 class="hero__sub-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorum impedit aperiam sit amet consectetur</h3>
+                <h1 class="display-3">We Specialise in Intensive Driving Courses</h1>
+                <ul class="hero__list">
+                    <li class="hero__links">
+                        <p class="lead">Weekly driving lessons also available</p>
+                    </li>
+                    <li class="hero__links">
+                        <p class="lead">Established for over 15 years</p>
+                    </li>
+                    <li class="hero__links">
+                        <p class="lead">5* Google reviews</p>
+                    </li>
+                </ul>
                     <a href="coursefinder.html" class="large-btn btn-block btn btn-primary">Get started</a>
                     <a href="#" class="large-btn btn-block btn btn-outline-secondary">More info</a>
                     <a href="coursefinder.html" class="small-btn btn btn-primary btn-lg">Get started</a>
@@ -89,7 +101,10 @@
                         <div class="features-card">
                                 <img src="img/startoffer.jpg" alt="start offer" class="features-card__img">
                             <div class="features-card__text-box">
-                                <h4 class="my-0 font-weight-normal">Get Started!</h4>
+                                <div class="features-card__heading">
+                                    <h4 class="my-0 font-weight-normal">Get Started!</h4>
+                                </div>
+                                
                             </div>
                             <div class="features-card__para-box">
                                 <p class="p-2">It is easy to book online, just simply fill out the form below to book a lesson and we will call you back as soon as possible and you will recieve your first driving lesson for £20.</p>
@@ -100,9 +115,11 @@
 
                     <div class="col-md-4">
                         <div class="features-card">
-                                <img src="img/intensive driving course.jpg" alt="intensive driving course" class="features-card__img">
+                                <img src="img/intensive-driving-course.jpg" alt="intensive driving course" class="features-card__img">
                             <div class="features-card__text-box">
-                                <h4 class="my-0 font-weight-normal">Intensive Driving Courses</h4>
+                                <div class="features-card__heading">
+                                    <h4 class="my-0 font-weight-normal">Intensive Driving Courses</h4>
+                                </div>
                             </div>
                             <div class="features-card__para-box">
                                 <p class="p-2">Overview of our Intensive Driving Courses. Premier Drive’s intensive driving courses are quite simply designed to get you through your…</p>
@@ -115,11 +132,14 @@
                         <div class="features-card">
                                 <img src="img/faq-road-signs.jpg" alt="faq" class="features-card__img">
                             <div class="features-card__text-box">
-                                <h4 class="my-0 font-weight-normal">FAQ</h4>
+                                <div class="features-card__heading">
+                                    <h4 class="my-0 font-weight-normal">FAQ</h4>
+                                </div>
+                                
                             </div>
                             <div class="features-card__para-box">
-                                <p class="p-2">We have a number of gift voucher options available, allowing you to choose the perfect amount to give. Gift…</p>
-                                <a href="#" class="btn btn-outline-primary">Buy Now</a>
+                                <p class="p-2">Please see a list below of our most faqs. If you are unable to find an answer below please…</p>
+                                <a href="#" class="btn btn-outline-primary">Read Now</a>
                             </div>
                         </div>
                     </div>
@@ -253,10 +273,10 @@
                     <div class="card-deck mb-3 text-center">
                       <div class="card mb-4 box-shadow">
                         <div class="card-header">
-                          <h4 class="my-0 font-weight-normal">Free</h4>
+                          <h4 class="my-0 font-weight-normal">Introductory</h4>
                         </div>
                         <div class="card-body">
-                          <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                          <h2 class="card-title pricing-card-title">£25/ <small class="text-muted">first hour</small></h2>
                           <ul class="list-unstyled mt-3 mb-4">
                             <li>10 users included</li>
                             <li>2 GB of storage</li>
@@ -271,7 +291,7 @@
                           <h4 class="my-0 font-weight-normal">Pro</h4>
                         </div>
                         <div class="card-body">
-                          <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                          <h2 class="card-title pricing-card-title">£25 <small class="text-muted">/ mo</small></h2>
                           <ul class="list-unstyled mt-3 mb-4">
                             <li>20 users included</li>
                             <li>10 GB of storage</li>
@@ -321,7 +341,7 @@
                 </script>
            </div> --> 
     
-           <section class="contact-us">
+           <section class="contact-us" id="contact-us">
             <div class="container">
                 <h2 class="u-center-text display-4">Contact Us</h2>
                 <div class="container">

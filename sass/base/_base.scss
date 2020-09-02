@@ -9,7 +9,7 @@
 html {
 
     font-size: 90%; /*root font size. Default font size of browser is 16px. Always select in percentage so if user changes browser default it scales. So 10/16 = 62.5%. Easier to set 10px then 1 rem would = 10px.*/
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
 /*@include respond(phone) { Dont this query as it also applies for the tab-port as below 900px
     font-size: 50%; 
 }*/ 
@@ -46,5 +46,5 @@ section {padding-top: 5rem;
 span{
     width:5rem;
     height:2rem;
-    color:red;
+    color: $primary;
 }

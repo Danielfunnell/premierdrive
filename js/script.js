@@ -13,32 +13,23 @@ function handleform(event) {
 const next= document.querySelector(".next-button");
 const submit = document.getElementById("submit").addEventListener("click", getResults);
 const bullets= [...document.querySelectorAll(".question-box__bullet")];
-console.log(bullets)
 
 
-
-
-// let maxNumber = score[0];
-
-
-//document.getElementById("btn-start").addEventListener("click", start);
-//document.getElementById("next").addEventListener("click", nextQuest);
-// form.addEventListener("click", renderQuestion);
 
 
 
 let questions = [
     {
-        question: "How many hours have you had?",
+        question: "How many hours have you has previously with  a driving instructor?",
         choiceA: "0-15 hours", 
         choiceB: "15-30",
         choiceC: "30-above"
     },
     {
-        question: "Are you a quick learner?",
-        choiceA: "No",
-        choiceB: "Not sure", 
-        choiceC: "Yes"
+        question: "When was the last time you have drove consistently?",
+        choiceA: "Over 1 year ago",
+        choiceB: "3-12 months ago", 
+        choiceC: "Under 1 month ago"
      },
      {
         question: "Have you done a practical test before",
@@ -100,7 +91,9 @@ function nextQuest(){
         document.getElementById("question-container").style.display='none';
         document.getElementById("submit").style.display='none'
         displayResult();
-        bullets[3].classList.add("last");
+        bullets[bullets.length-1].classList.add("last");
+        console.log(bullets[bullets.length-1])
+        
     }
     else {
         questDiv.innerHTML=""

@@ -37,6 +37,12 @@
 .hidden {
   display: "none" !important; }
 
+.u-margin-bottom {
+  margin-bottom: 5rem !important; }
+
+.skew-correction {
+  transform: skewY(3deg) !important; }
+
 *,
 *::after,
 *::before {
@@ -124,7 +130,7 @@ h2:after {
   text-align: center;
   width: 100%;
   border-radius: 3px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px 0 rgba(63, 49, 49, 0.1);
   overflow: hidden;
   height: auto;
   margin-bottom: 1rem; }
@@ -150,7 +156,7 @@ h2:after {
     height: 7rem;
     padding: 0.75rem 1.25rem;
     border-top: solid 2px #fff;
-    background-color: #f7f8fc;
+    background-color: #f9f9f9;
     margin-top: -3rem; }
     @media screen and (min-width: 48em) {
       .features-card__text-box {
@@ -210,7 +216,7 @@ h2:after {
   background-color: #fff;
   padding: 1rem;
   border-radius: 3px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px 0 rgba(63, 49, 49, 0.1);
   top: -4.5rem;
   left: 0;
   width: 100;
@@ -352,7 +358,7 @@ h2:after {
     background-color: #d20804;
     border: 2px solid #d20804; }
   .question-box__container {
-    background-color: #f7f8fc;
+    background-color: #f9f9f9;
     border-radius: .2rem;
     padding: 1rem;
     margin-bottom: 1rem; }
@@ -361,7 +367,7 @@ h2:after {
     .question-box__container__container:last-child {
       margin-bottom: 2rem; }
   .question-box__side {
-    background-color: #f7f8fc;
+    background-color: #f9f9f9;
     padding: 1rem;
     border-radius: .7rem; }
     @media screen and (min-width: 62em) {
@@ -418,6 +424,38 @@ h2:after {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
+.accordion {
+  background-color: #fff;
+  margin: 1rem 0 0 0;
+  border-radius: .3rem .3rem 0 0;
+  box-shadow: 0 2px 2px 0 rgba(63, 49, 49, 0.1);
+  cursor: pointer;
+  padding: 1.1rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  color: #d20804;
+  font-size: 120%; }
+  .accordion:hover {
+    background-color: #f9f9f9; }
+  .accordion__panel {
+    padding: 1rem;
+    display: none;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(63, 49, 49, 0.1); }
+
+.active {
+  background-color: #f9f9f9; }
+
+button.accordion::after {
+  content: '\002B';
+  color: #d20804;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px; }
+
 .hero {
   background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/driving-schools-ashford-hero.jpg);
   height: 80vh;
@@ -434,12 +472,12 @@ h2:after {
       min-height: 89vh;
       clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%); } }
   .hero--intensive {
-    background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/calender-hero.jpg);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-    height: 80vh;
+    background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/diary.jpg);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%);
+    height: 89vh;
     position: relative;
     background-size: cover;
-    background-position: center; }
+    background-position: bottom; }
   .hero__text-box {
     top: 7%;
     color: #fff;
@@ -579,7 +617,7 @@ footer h5 {
 
 .our-courses {
   position: relative;
-  background-color: #f7f8fc;
+  background-color: #f9f9f9;
   text-align: center;
   margin-top: 40px;
   padding-bottom: 40px; }
@@ -643,7 +681,7 @@ footer h5 {
     color: rgba(255, 255, 255, 0.726); }
 
 .pricing {
-  background-color: #f7f8fc;
+  background-color: #f9f9f9;
   margin-bottom: 5rem; }
 
 #map {
@@ -655,7 +693,7 @@ footer h5 {
   background-color: #fff; }
 
 .section-contact-us__diagonal {
-  background-color: #f7f8fc;
+  background-color: #f9f9f9;
   top: 20rem;
   left: 0;
   height: 57rem;
@@ -664,19 +702,64 @@ footer h5 {
   clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%); }
 
 .intensive-courses {
-  background-color: #f7f8fc;
   position: relative;
-  clip-path: polygon(0% 11%, 99% 0%, 100% 99%, 1% 100%); }
-  .intensive-courses__how {
-    margin-top: 6rem; }
+  padding-bottom: 5rem; }
+  .intensive-courses__for-you {
+    background-color: #f9f9f9; }
+  .intensive-courses__question {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color: #fff;
+    background-color: #e5716f;
+    height: auto;
+    border-radius: 1rem; }
+    @media screen and (min-width: 62em) {
+      .intensive-courses__question {
+        margin-bottom: 5rem;
+        padding: 1rem;
+        height: 60%; } }
+    .intensive-courses__question--first {
+      background-color: #fff;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem; }
+      @media screen and (min-width: 62em) {
+        .intensive-courses__question--first {
+          padding: 1rem;
+          margin: 3rem 25%; } }
   .intensive-courses__heading {
     margin-bottom: 5rem; }
   .intensive-courses__img {
     border-radius: 10rem 0rem 0rem 10rem;
-    position: absolute;
-    margin: 50% 0;
-    overflow: hidden;
-    right: -15rem; }
+    position: relative; }
+    @media screen and (min-width: 62em) {
+      .intensive-courses__img {
+        border-radius: 10rem 0rem 0rem 10rem;
+        position: absolute;
+        top: 10%;
+        right: -60%;
+        overflow: hidden; } }
+  .intensive-courses__gear {
+    position: relative;
+    width: 100%;
+    border-radius: 10rem 0rem 0rem 10rem;
+    overflow: hidden; }
+  .intensive-courses__side {
+    background-color: #f9f9f9;
+    position: relative;
+    margin-top: -2rem;
+    padding: 1rem;
+    border-radius: .7rem; }
+    @media screen and (min-width: 62em) {
+      .intensive-courses__side {
+        background-color: #f9f9f9;
+        position: absolute;
+        bottom: 10%;
+        left: 15%;
+        margin-left: 2rem;
+        padding: 1rem;
+        border-radius: .7rem; } }
 
 *,
 *::before,

@@ -3,9 +3,7 @@
     &__para{
         font-size: 1rem;
         line-height: 1.75em;
-        border-top: 3px solid;
-        border-image: linear-gradient(to right, $color-dark-grey 0%, $color-dark-grey 100%);
-        border-image-slice: 1;
+        border-top: 3px dashed $color-dark-grey;
         border-width: 3px;
         margin: 0;
         padding: 40px;
@@ -20,7 +18,7 @@
             padding: .7rem;
             height: 2rem;
             width: 2rem;
-            background-color: $color-secondary;
+            background-color: $color-coral;
             text-align: center;
             line-height: .5rem;
             color: $color-white;
@@ -30,7 +28,7 @@
     }
 
     &__para:nth-child(odd) {
-        border-right: 3px solid;
+        border-right: 3px dotted $color-dark-grey;
         padding-left: 0;
         
         &:before {
@@ -40,7 +38,7 @@
     }
 
     &__para:nth-child(even) {
-        border-left: 3px solid;
+        border-left: 3px dotted $color-dark-grey;
         padding-right: 0;
         
         &:before {

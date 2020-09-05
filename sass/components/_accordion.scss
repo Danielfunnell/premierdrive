@@ -10,7 +10,11 @@
     text-align: left;
     outline: none;
     color: $primary;
-    font-size: 100%;
+    font-size: 80%;
+
+    @include respond(tab-land) {
+       font-size: 100%;
+    }
 
     &:hover {
         background-color: $color-light-grey; 

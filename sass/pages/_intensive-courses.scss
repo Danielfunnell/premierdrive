@@ -32,7 +32,8 @@
             
             @include respond(tab-land) {
                 padding:1rem;
-                margin: 3rem 25%;
+                margin: 0 25%;
+                margin-bottom: 2rem;
             }
         }
        
@@ -49,7 +50,6 @@
     &__img {
         border-radius: 10rem 0rem 0rem 10rem;
         position: relative;
-        overflow: hidden;
         display:none;
     
         
@@ -60,6 +60,7 @@
             display: inline-block;
             border-radius: 10rem 0rem 0rem 10rem;
             position: absolute;
+            overflow: hidden;
             top:10%;
             right:-60%;
             

@@ -29,6 +29,7 @@
     top:0;
     left:0;
     background-size: cover;
+    background-position: left;
     text-align: center;
     padding-bottom: 3.5rem;
     transition: all ease-out;
@@ -122,11 +123,21 @@
 
 .section-contact-us__diagonal {
     background-color: $color-light-grey;
-    top:20rem;
+    top:24rem;
     left:0;
-    height:57rem;
+    height:90rem;
     position: absolute;
     width: 100%;
-    clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+
+    @include respond(tab-land) {
+        background-color: $color-light-grey;
+        top:20rem;
+        left:0;
+        height:57rem;
+        position: absolute;
+        width: 100%;
+        clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+    }
 }
 

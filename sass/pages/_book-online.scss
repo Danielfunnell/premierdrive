@@ -1,0 +1,17 @@
+.book-online {
+    position: relative;
+}   
+
+
+
+
+.section-book-online__diagonal {
+    background-color: $color-light-grey;
+    top:170%;
+    left:0;
+    height:90rem;
+    position: absolute;
+    width: 100%;
+    clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+
+}

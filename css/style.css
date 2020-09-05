@@ -436,7 +436,7 @@ h2:after {
   text-align: left;
   outline: none;
   color: #d20804;
-  font-size: 120%; }
+  font-size: 100%; }
   .accordion:hover {
     background-color: #f9f9f9; }
   .accordion__panel {
@@ -474,10 +474,10 @@ button.accordion::after {
   .hero--intensive {
     background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/diary.jpg);
     clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%);
-    height: 89vh;
+    height: 80vh;
     position: relative;
     background-size: cover;
-    background-position: bottom; }
+    background-position: center; }
   .hero__text-box {
     top: 7%;
     color: #fff;
@@ -711,7 +711,6 @@ footer h5 {
     padding: 1rem;
     color: #fff;
     background-color: #e5716f;
-    height: auto;
     border-radius: 1rem; }
     @media screen and (min-width: 62em) {
       .intensive-courses__question {
@@ -732,23 +731,20 @@ footer h5 {
     margin-bottom: 5rem; }
   .intensive-courses__img {
     border-radius: 10rem 0rem 0rem 10rem;
-    position: relative; }
+    position: relative;
+    overflow: hidden;
+    display: none; }
     @media screen and (min-width: 62em) {
       .intensive-courses__img {
+        display: inline-block;
         border-radius: 10rem 0rem 0rem 10rem;
         position: absolute;
         top: 10%;
-        right: -60%;
-        overflow: hidden; } }
-  .intensive-courses__gear {
-    position: relative;
-    width: 100%;
-    border-radius: 10rem 0rem 0rem 10rem;
-    overflow: hidden; }
+        right: -60%; } }
   .intensive-courses__side {
     background-color: #f9f9f9;
     position: relative;
-    margin-top: -2rem;
+    width: auto;
     padding: 1rem;
     border-radius: .7rem; }
     @media screen and (min-width: 62em) {

@@ -14,7 +14,6 @@
         padding:1rem;
         color: $color-white;
         background-color: $color-coral;
-        height:auto;
         border-radius: 1rem;
         
         @include respond(tab-land) {
@@ -45,40 +44,36 @@
         
     } 
 
-    
+  
 
     &__img {
         border-radius: 10rem 0rem 0rem 10rem;
         position: relative;
-        
+        overflow: hidden;
+        display:none;
     
         
        
         
         
         @include respond(tab-land) {
+            display: inline-block;
             border-radius: 10rem 0rem 0rem 10rem;
             position: absolute;
             top:10%;
             right:-60%;
-            overflow: hidden;
             
         }
        
 
     }
 
-    &__gear {
-        position: relative;
-        width:100%;      
-        border-radius: 10rem 0rem 0rem 10rem;
-        overflow: hidden;
-    }
+
 
     &__side {
         background-color: $color-light-grey;
         position: relative;
-        margin-top: -2rem;
+        width:auto;
         padding: 1rem;
         border-radius: .7rem;
         

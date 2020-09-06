@@ -401,14 +401,14 @@ h2:after {
     font-size: 1rem; }
 
 .timeline__para:nth-child(odd) {
-  border-right: 3px dotted #a4a4a4;
+  border-right: 3px dashed #a4a4a4;
   padding-left: 0; }
   .timeline__para:nth-child(odd):before {
     left: 100%;
     margin-left: -1rem; }
 
 .timeline__para:nth-child(even) {
-  border-left: 3px dotted #a4a4a4;
+  border-left: 3px dashed #a4a4a4;
   padding-right: 0; }
   .timeline__para:nth-child(even):before {
     right: 100%;
@@ -784,11 +784,30 @@ footer h5 {
 .book-online {
   position: relative; }
 
+.tab {
+  display: none; }
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5; }
+
+.step.active {
+  opacity: 1; }
+
+.step.finish {
+  background-color: #4CAF50; }
+
 .section-book-online__diagonal {
   background-color: #f9f9f9;
   top: 170%;
   left: 0;
-  height: 90rem;
+  height: 40rem;
   position: absolute;
   width: 100%;
   clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%); }

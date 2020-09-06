@@ -135,35 +135,6 @@ function nextQuest(){
 
 
 
-    // function getScore () {
-    //     if(score <= 3) {
-    //         console.log("your a beginner")
-    //     } else if (score <= 6) {
-    //         console.log("your an intermediate")
-    //     } else if (score > 6) {
-    //         console.log("Your advanced")
-    //     }
-    // }
-
-
-
-// function getScore() {
-// for(let i = 0; i < score.length; i++) {
-//     curNumber = score[i];
-
-//     if(occurances[curNumber] !== undefined) {
-//         occurances[curNumber]++;
-//     } else {
-//         occurances[curNumber] = 1;
-//     }
-//     if(occurances[curNumber] > occurances[maxNumber]) {
-//         maxNumber = curNumber;
-//     }
-// }
-
-
-//     displayResult();
-// };
 
 
 

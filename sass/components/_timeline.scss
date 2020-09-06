@@ -28,7 +28,7 @@
     }
 
     &__para:nth-child(odd) {
-        border-right: 3px dotted $color-dark-grey;
+        border-right: 3px dashed $color-dark-grey;
         padding-left: 0;
         
         &:before {
@@ -38,7 +38,7 @@
     }
 
     &__para:nth-child(even) {
-        border-left: 3px dotted $color-dark-grey;
+        border-left: 3px dashed $color-dark-grey;
         padding-right: 0;
         
         &:before {

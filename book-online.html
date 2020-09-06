@@ -61,7 +61,7 @@
             
             <section class="hero--book no-padding-top">
                 <div class="hero__text-box">
-                    <h1 class="display-3">Book Online</h1>
+                    <h1 class="display-3">Take the Right Turn & Book Now!</h1>
                         <a href="coursefinder.html" class="large-btn btn-block btn btn-primary">Get started</a>
                         <a href="coursefinder.html" class="small-btn btn btn-primary btn-lg">Get started</a>
                 </div>
@@ -90,72 +90,151 @@
             <section class="book-online">
               <div class="container">
                 <div class="row">
-                  <div class="col md-6">
+                  <div class="col-md-9">
                     <div class="form">
-                      <form action="" class="form-group">
-                  <div class="form-row">
-              <div class="col u-margin-bottom-form">
-                  <label for="first-name">First name</label>  
-                  <input type="text" class="form-control form-control-lg" id="first-name">
+                      <form action="" class="form-group" id="form-book">
+                        <div class="tab">
+                          <h5>Your details</h5>
+                          <div class="form-row">
+                      <div class="col u-margin-bottom-form">
+                          <label for="first-name">First name</label>  
+                          <input type="text" class="form-control form-control-lg" id="first-name">
+                      </div>
+                      <div class="col u-margin-bottom-form">
+                          <label for="last-name">Last name</label>   
+                          <input type="text" class="form-control form-control-lg" id="last-name">
+                      </div>
+                  </div>
+              <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control form-control-lg" id="email">
               </div>
-              <div class="col u-margin-bottom-form">
-                  <label for="last-name">Last name</label>   
-                  <input type="text" class="form-control form-control-lg" id="last-name">
+              <div class="form-group">
+                  <label for="telephone">Telephone</label>
+                  <input type="tel" class="form-control form-control-lg" id="telephone">
               </div>
-          </div>
-      <div class="form-group">
-          <label for="email">Email address</label>
-          <input type="email" class="form-control form-control-lg" id="email">
-      </div>
-      <div class="form-group">
-          <label for="telephone">Telephone</label>
-          <input type="tel" class="form-control form-control-lg" id="telephone">
-      </div>
-      <div class="form-group">
-        <label for="first-line-address">First line of address</label>  
-        <input type="text" class="form-control form-control-lg" id="first-line-address">
-    </div>
-    <div class="form-group">
-      <label for="second-line-address">Second line of address</label>  
-      <input type="text" class="form-control form-control-lg" id="second-line-address">
-  </div>
-    <div class="form-group">
-      <label for="city-town">City / Town</label>  
-      <input type="text" class="form-control form-control-lg" id="city-town">
-  </div>
-    <div class="form-group">
-      <label for="county">County</label>  
-      <input type="text" class="form-control form-control-lg" id="county">
-  </div>
-    <div class="form-group">
-      <label for="postcode">Post-code</label>  
-      <input type="text" class="form-control form-control-lg" id="postcode">
-  </div>
-      <div class="form-group">
-          <label for="contact-about">Contact me about</label>
-          <select class="form-control form-control-lg" id="contact-about">
-            <option>Driving lessons</option>
-            <option>Intensive courses</option>
-            <option>Special offers!</option>
-            <option>Motorway lessons</option>
-            <option>Other</option>
-          </select>
-        </div>
+                        </div>
+                  <div class="tab">
+                    <div class="form-group">
+                      <h5>Address details</h5>
+                      <label for="first-line-address">First line of address</label>  
+                      <input type="text" class="form-control form-control-lg" id="first-line-address">
+                  </div>
+                  <div class="form-group">
+                    <label for="second-line-address">Second line of address</label>  
+                    <input type="text" class="form-control form-control-lg" id="second-line-address">
+                </div>
+                  <div class="form-group">
+                    <label for="city-town">City / Town</label>  
+                    <input type="text" class="form-control form-control-lg" id="city-town">
+                </div>
+                  <div class="form-group">
+                    <label for="county">County</label>  
+                    <input type="text" class="form-control form-control-lg" id="county">
+                </div>
+                  <div class="form-group">
+                    <label for="postcode">Post-code</label>  
+                    <input type="text" class="form-control form-control-lg" id="postcode">
+                </div>
+                  </div>     
+      <div class="tab">
         <div class="form-group">
-          <label for="message">Your message</label>
-          <textarea class="form-control form-control-lg" id="message" rows="3"></textarea>
+          <h5>Lesson details</h5>
+            <label for="type-of-lesson">Type of lessons required</label>
+            <select class="form-control form-control-lg" id="type-of-lesson">
+              <option>Standard lessons</option>
+              <option>Intensive courses</option>
+              <option>Assessment lesson</option>
+              <option>Motorway lessons</option>
+              <option>Refresher lessons</option>
+              <option>Pass plus</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="start-date">Prefered start date dd/mm/yyyy</label>  
+            <input type="text" class="form-control form-control-lg" id="start-date">
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        <p>Preferred days for lesson</p>
+        <div class="form-group">
+           <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Monday</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    <label class="form-check-label" for="inlineCheckbox2">Tuesday</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+    <label class="form-check-label" for="inlineCheckbox3">Wednesday</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+    <label class="form-check-label" for="inlineCheckbox4">Thursday</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+    <label class="form-check-label" for="inlineCheckbox5">Friday</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+    <label class="form-check-label" for="inlineCheckbox6">Saturday</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7" disabled>
+    <label class="form-check-label" for="inlineCheckbox7">Sunday</label>
+  </div>
+          </div>
+          <p>Preferred time for lesson</p>
+        <div class="form-group">
+           <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="mornings" value="time1">
+    <label class="form-check-label" for="mornings">Mornings</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="lunch-time" value="time2">
+    <label class="form-check-label" for="lunch-time">Lunch time</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="afternoon" value="time3">
+    <label class="form-check-label" for="afternoon">Afternoon</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="evenings" value="time4">
+    <label class="form-check-label" for="evenings">Evenings</label>
+  </div>
+          <div class="form-group">
+            <label for="message">Any additional comments</label>
+            <textarea class="form-control form-control-lg" id="message" rows="3"></textarea>
+          </div>
+      </div>
+      </div>
+      
+        <button type="button" class="btn btn-outline-primary btn-lg" id="prevBtn">Previous</button>
+        <button type="button" class="btn btn-primary btn-lg" id="nextBtn">Next</button>
+
+        <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+
       </form>
       </div>
     </div>
-                  <div class="col md-6">
+                
+              
+                  <div class="col-md-3">
                     col 2
                   </div>
+                </div>
                 </div>
               </div>
             </section>
 
         </main>
 
+        <script src="js/book.js"></script>
     </body>

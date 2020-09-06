@@ -2,14 +2,39 @@
     position: relative;
 }   
 
+.tab {
+    display: none;
+}
 
+// #nextBtn {
+//     position: absolute;
+//     right:0;
+// }
 
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+.step.active {
+    opacity: 1;
+}
+
+.step.finish {
+    background-color: #4CAF50;
+}
 
 .section-book-online__diagonal {
     background-color: $color-light-grey;
     top:170%;
     left:0;
-    height:90rem;
+    height:40rem;
     position: absolute;
     width: 100%;
     clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);

@@ -93,57 +93,57 @@
                   <div class="col-md-9">
                     <div class="form">
                       
-                      <form name="book-online" action="POST" data-netlify="true" class="form-group" id="form-book">
+                      <form name="book-online" method="POST" data-netlify="true" class="form-group" id="form-book">
                         <div class="tab">
                           <h5>Your details</h5>
                           <div class="form-row">
                       <div class="col u-margin-bottom-form">
                           <label for="first-name">*First name</label>  
-                          <input type="text" class="form-control form-control-lg" id="first-name" required>
+                          <input type="text" class="form-control form-control-lg" name="first-name" id="first-name" required>
                           
                       </div>
                       <div class="col u-margin-bottom-form">
                           <label for="last-name">*Last name</label>   
-                          <input type="text" class="form-control form-control-lg" id="last-name" required>
+                          <input type="text" class="form-control form-control-lg" name="last-name" id="last-name" required>
                       </div>
                   </div>
               <div class="form-group">
                   <label for="email">*Email address</label>
-                  <input type="email" class="form-control form-control-lg" id="email" required>
+                  <input type="email" class="form-control form-control-lg" name="email" id="email" required>
               </div>
               <div class="form-group">
                   <label for="telephone">*Telephone</label>
-                  <input type="tel" class="form-control form-control-lg" id="telephone" required>
+                  <input type="tel" class="form-control form-control-lg" name="telephone" id="telephone" required>
               </div>
                         </div>
                   <div class="tab">
                     <div class="form-group">
                       <h5>Address details</h5>
                       <label for="first-line-address">*First line of address</label>  
-                      <input type="text" class="form-control form-control-lg" id="first-line-address" required>
+                      <input type="text" class="form-control form-control-lg" name="first-line-address" id="first-line-address" required>
                   </div>
                   <div class="form-group">
                     <label for="second-line-address">Second line of address</label>  
-                    <input type="text" class="form-control form-control-lg" id="second-line-address">
+                    <input type="text" class="form-control form-control-lg" name="second-line-address" id="second-line-address">
                 </div>
                   <div class="form-group">
                     <label for="city-town">*City / Town</label>  
-                    <input type="text" class="form-control form-control-lg" id="city-town" required>
+                    <input type="text" class="form-control form-control-lg" name="city-town" id="city-town" required>
                 </div>
                   <div class="form-group">
                     <label for="county">County</label>  
-                    <input type="text" class="form-control form-control-lg" id="county">
+                    <input type="text" class="form-control form-control-lg" name="county" id="county">
                 </div>
                   <div class="form-group">
                     <label for="postcode">*Post-code</label>  
-                    <input type="text" class="form-control form-control-lg" id="postcode" required>
+                    <input type="text" class="form-control form-control-lg" name="postcode" id="postcode" required>
                 </div>
                   </div>     
       <div class="tab">
         <div class="form-group">
           <h5>Lesson details</h5>
             <label for="type-of-lesson">Type of lessons required</label>
-            <select class="form-control form-control-lg" id="type-of-lesson">
+            <select class="form-control form-control-lg" name="type-of-lesson" id="type-of-lesson">
               <option>Standard lessons</option>
               <option>Intensive courses</option>
               <option>Assessment lesson</option>
@@ -155,63 +155,66 @@
           </div>
           <div class="form-group">
             <label for="start-date">Prefered start date dd/mm/yyyy</label>  
-            <input type="text" class="form-control form-control-lg" id="start-date">
+            <input type="text" class="form-control form-control-lg" name="start-date" id="start-date">
         </div>
         <p>Preferred days for lesson</p>
         <div class="form-group">
            <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <input class="form-check-input" type="checkbox" name="monday" id="inlineCheckbox1" value="option1">
     <label class="form-check-label" for="inlineCheckbox1">Monday</label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    <input class="form-check-input" type="checkbox" name="tuesday" id="inlineCheckbox2" value="option2">
     <label class="form-check-label" for="inlineCheckbox2">Tuesday</label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+    <input class="form-check-input" type="checkbox" name="wednesday" id="inlineCheckbox3" value="option3">
     <label class="form-check-label" for="inlineCheckbox3">Wednesday</label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+    <input class="form-check-input" type="checkbox" name="thursday" id="inlineCheckbox4" value="option4">
     <label class="form-check-label" for="inlineCheckbox4">Thursday</label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+    <input class="form-check-input" type="checkbox" name="friday" id="inlineCheckbox5" value="option5">
     <label class="form-check-label" for="inlineCheckbox5">Friday</label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+    <input class="form-check-input" type="checkbox" name="saturday" id="inlineCheckbox6" value="option6">
     <label class="form-check-label" for="inlineCheckbox6">Saturday</label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7" disabled>
+    <input class="form-check-input" type="checkbox" name="sunday" id="inlineCheckbox7" value="option7" disabled>
     <label class="form-check-label" for="inlineCheckbox7">Sunday</label>
   </div>
           </div>
           <p>Preferred time for lesson</p>
         <div class="form-group">
            <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="mornings" value="time1">
+    <input class="form-check-input" type="checkbox" name="mornings" id="mornings" value="time1">
     <label class="form-check-label" for="mornings">Mornings</label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="lunch-time" value="time2">
+    <input class="form-check-input" type="checkbox" name="lunch-time" id="lunch-time" value="time2">
     <label class="form-check-label" for="lunch-time">Lunch time</label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="afternoon" value="time3">
+    <input class="form-check-input" type="checkbox" name="afternonn" id="afternoon" value="time3">
     <label class="form-check-label" for="afternoon">Afternoon</label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="evenings" value="time4">
+    <input class="form-check-input" type="checkbox" name="evenings" id="evenings" value="time4">
     <label class="form-check-label" for="evenings">Evenings</label>
   </div>
           <div class="form-group">
             <label for="message">Any additional comments</label>
-            <textarea class="form-control form-control-lg" id="message" rows="3"></textarea>
+            <textarea class="form-control form-control-lg" name="message" id="message" rows="3"></textarea>
           </div>
       </div>
       </div>
+      <div class="form-group">
+        <div data-netlify-recaptcha="true"></div>
+    </div>
       
         <button type="button" class="btn btn-outline-primary btn-lg" id="prevBtn">Previous</button>
         <button type="button" class="btn btn-primary btn-lg" id="nextBtn">Next</button> 

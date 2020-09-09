@@ -784,6 +784,9 @@ footer h5 {
 .book-online {
   position: relative; }
 
+input.invalid {
+  background-color: #ffdddd; }
+
 .tab {
   display: none; }
 

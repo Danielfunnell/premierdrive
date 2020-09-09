@@ -2,6 +2,10 @@
     position: relative;
 }   
 
+input.invalid {
+    background-color: #ffdddd;
+  }
+  
 .tab {
     display: none;
 }

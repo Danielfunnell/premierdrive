@@ -1,12 +1,13 @@
 
 // targets next and previous buttons
-const previous = document.getElementById("prevBtn")
-const next = document.getElementById("nextBtn")
-
+const previous = document.getElementById("prevBtn");
+const next = document.getElementById("nextBtn");
+const errorDiv = document.querySelector(".form__error");
 
 // click events added to next and previous buttons
 previous.addEventListener("click", prevForm);
 next.addEventListener("click", handleform);
+
 
 // tragets tab divs
 let tab = document.getElementsByClassName("tab");
@@ -17,13 +18,19 @@ function handleform() {
 
     let tab = document.getElementsByClassName("tab");
     let input, i
+    let messages = []
     
     input = tab[currentTab].getElementsByTagName("input");
     
+   
     // loops through input fields to check content and returns false if content is empty otherwise moves to next form.
    for(i=0; i < input.length; i++) {
-        if(input[i].value == "") {
+       //checks if required fields are filled in 
+        if(!input[i].checkValidity()) {
+          input[i].style.border = 'solid 1px #d20804'
+          errorDiv.innerText = '*Please fill out all required form details'
         return false
+       
           
         // if on last tab and input fields are valid changes next button to type submit
         } if (currentTab == tab.length-1) {

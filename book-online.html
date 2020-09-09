@@ -92,49 +92,51 @@
                 <div class="row">
                   <div class="col-md-9">
                     <div class="form">
-                      <form action="" class="form-group" id="form-book">
+                      
+                      <form name="book-online" action="POST" data-netlify="true" class="form-group" id="form-book">
                         <div class="tab">
                           <h5>Your details</h5>
                           <div class="form-row">
                       <div class="col u-margin-bottom-form">
-                          <label for="first-name">First name</label>  
-                          <input type="text" class="form-control form-control-lg" id="first-name"  oninput="this.className = ''" >
+                          <label for="first-name">*First name</label>  
+                          <input type="text" class="form-control form-control-lg" id="first-name" required>
+                          
                       </div>
                       <div class="col u-margin-bottom-form">
-                          <label for="last-name">Last name</label>   
-                          <input type="text" class="form-control form-control-lg" id="last-name">
+                          <label for="last-name">*Last name</label>   
+                          <input type="text" class="form-control form-control-lg" id="last-name" required>
                       </div>
                   </div>
               <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" class="form-control form-control-lg" id="email">
+                  <label for="email">*Email address</label>
+                  <input type="email" class="form-control form-control-lg" id="email" required>
               </div>
               <div class="form-group">
-                  <label for="telephone">Telephone</label>
-                  <input type="tel" class="form-control form-control-lg" id="telephone">
+                  <label for="telephone">*Telephone</label>
+                  <input type="tel" class="form-control form-control-lg" id="telephone" required>
               </div>
                         </div>
                   <div class="tab">
                     <div class="form-group">
                       <h5>Address details</h5>
-                      <label for="first-line-address">First line of address</label>  
-                      <input type="text" class="form-control form-control-lg" id="first-line-address" oninput="this.className = ''">
+                      <label for="first-line-address">*First line of address</label>  
+                      <input type="text" class="form-control form-control-lg" id="first-line-address" required>
                   </div>
                   <div class="form-group">
                     <label for="second-line-address">Second line of address</label>  
                     <input type="text" class="form-control form-control-lg" id="second-line-address">
                 </div>
                   <div class="form-group">
-                    <label for="city-town">City / Town</label>  
-                    <input type="text" class="form-control form-control-lg" id="city-town">
+                    <label for="city-town">*City / Town</label>  
+                    <input type="text" class="form-control form-control-lg" id="city-town" required>
                 </div>
                   <div class="form-group">
                     <label for="county">County</label>  
                     <input type="text" class="form-control form-control-lg" id="county">
                 </div>
                   <div class="form-group">
-                    <label for="postcode">Post-code</label>  
-                    <input type="text" class="form-control form-control-lg" id="postcode">
+                    <label for="postcode">*Post-code</label>  
+                    <input type="text" class="form-control form-control-lg" id="postcode" required>
                 </div>
                   </div>     
       <div class="tab">
@@ -212,14 +214,10 @@
       </div>
       
         <button type="button" class="btn btn-outline-primary btn-lg" id="prevBtn">Previous</button>
-        <button type="button" class="btn btn-primary btn-lg" id="nextBtn">Next</button>
+        <button type="button" class="btn btn-primary btn-lg" id="nextBtn">Next</button> 
+        <div class="form__error"></div>
 
-        <div style="text-align:center;margin-top:40px;">
-          <span class="step"></span>
-          <span class="step"></span>
-          <span class="step"></span>
-          <span class="step"></span>
-        </div>
+      
 
       </form>
       </div>

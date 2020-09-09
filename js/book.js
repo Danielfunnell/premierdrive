@@ -3,6 +3,8 @@
 const previous = document.getElementById("prevBtn");
 const next = document.getElementById("nextBtn");
 const errorDiv = document.querySelector(".form__error");
+const recap = document.querySelector(".recaptcha")
+console.log(recap)
 
 // click events added to next and previous buttons
 previous.addEventListener("click", prevForm);
@@ -50,11 +52,14 @@ function showTab(currentTab) {
     tab[currentTab].style.display = "block";
 
     if(currentTab == 0) {
-        previous.style.display = "none" 
+        previous.style.display = "none"
+        recap.style.display= "none" 
     } else {
         previous.style.display = "inline-block"
+        recap.style.display= "none"
     } if  (currentTab == tab.length-1) {
         next.innerHTML = "Submit";
+        recap.style.display= "block"
     } else {
         next.innerHTML = "Next";
     }

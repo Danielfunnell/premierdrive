@@ -17,7 +17,7 @@
     <body>
 
         <header>
-            <nav class="navbar navbar-expand-lg  navbar-light bg-light pl-md-5 pr-md-5">
+            <nav class="navbar fixed-top navbar-expand-lg  navbar-light bg-light pl-md-5 pr-md-5">
                 <a class="navbar-brand" href="index.html"><img src="/img/premier-drive-driving-school-retina.png" alt="logo" class="navbar__logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
                           Driving Lessons
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">Our driving lessons</a>
+                          <a class="dropdown-item" href="#welcome">Our driving lessons</a>
                           <a class="dropdown-item" href="#">Our prices</a>
                           <a class="dropdown-item" href="#">The driving test</a>
                     </li>
@@ -41,8 +41,8 @@
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="intensive-courses.html">Our intensives</a>
-                        <a class="dropdown-item" href="#">Course prices</a>
-                        <a class="dropdown-item" href="#">FAQs</a>
+                        <a class="dropdown-item" href="intensive-courses.html#intensive-prices">Course prices</a>
+                        <a class="dropdown-item" href="intensive-courses.html#faqsjump">FAQs</a>
                     </li>
                     <li class="nav-item mb-3 mb-md-0">
                         <a class="nav-link custom" href="book-online.html">Book Online</a>
@@ -59,7 +59,7 @@
 
         <main>
             
-        <section class="hero no-padding-top">
+        <section class="hero">
             <div class="hero__text-box">
                 <h1 class="display-3">We Specialise in Intensive Driving Courses</h1>
                 <ul class="hero__list">
@@ -79,7 +79,7 @@
         </section>
         
                    
-        <section class="welcome">
+        <section class="welcome" id="welcome">
             <div class="container">
                 <div class="welcome__text-box">
                         <h2 class="u-center-text display-4 mt-4">Welcome to Premier Drive</h2>
@@ -107,7 +107,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="features-card">
-                                <img src="img/startoffer.jpg" alt="start offer" class="features-card__img">
+                                <img src="img/startoffer-min.jpg" alt="start offer" class="features-card__img">
                             <div class="features-card__text-box">
                                 <div class="features-card__heading">
                                     <h4 class="my-0 font-weight-normal">Get Started!</h4>
@@ -116,14 +116,14 @@
                             </div>
                             <div class="features-card__para-box">
                                 <p class="p-2">It is easy to book online, just simply fill out the form below to book a lesson and we will call you back as soon as possible and you will recieve your first driving lesson for £20.</p>
-                                <a href="#" class="btn btn-outline-primary">Book Now</a>
+                                <a href="book-online.html" class="btn btn-outline-primary">Book Now</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="features-card">
-                                <img src="img/intensive-driving-course.jpg" alt="intensive driving course" class="features-card__img">
+                                <img src="img/intensive-driving-course-min.jpg" alt="intensive driving course" class="features-card__img">
                             <div class="features-card__text-box">
                                 <div class="features-card__heading">
                                     <h4 class="my-0 font-weight-normal">Intensive Driving Courses</h4>
@@ -131,14 +131,14 @@
                             </div>
                             <div class="features-card__para-box">
                                 <p class="p-2">Overview of our Intensive Driving Courses. Premier Drive’s intensive driving courses are quite simply designed to get you through your…</p>
-                                <a href="#" class="btn btn-outline-primary">Read More</a>
+                                <a href="intensive-courses.html" class="btn btn-outline-primary">Read More</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="features-card">
-                                <img src="img/faq-road-signs.jpg" alt="faq" class="features-card__img">
+                                <img src="img/faq-road-signs-min.jpg" alt="faq" class="features-card__img">
                             <div class="features-card__text-box">
                                 <div class="features-card__heading">
                                     <h4 class="my-0 font-weight-normal">FAQ</h4>
@@ -147,7 +147,7 @@
                             </div>
                             <div class="features-card__para-box">
                                 <p class="p-2">Please see a list below of our most faqs. If you are unable to find an answer below please…</p>
-                                <a href="#" class="btn btn-outline-primary">Read Now</a>
+                                <a href="intensive-courses.html#faqsjump" class="btn btn-outline-primary">Read Now</a>
                             </div>
                         </div>
                     </div>
@@ -331,23 +331,7 @@
                     
             <h2 class="u-center-text display-4">Areas We Cover</h2>
         
-           <!--<div id="map">
-                <script>
-                    // Initialize and add the map
-                    function initMap() {
-                      // The location of Uluru
-                      var uluru = {lat: 51.082340, lng: 0.696220};
-                      // The map, centered at Uluru
-                      var map = new google.maps.Map(
-                          document.getElementById('map'), {zoom: 10, center: uluru});
-                      // The marker, positioned at Uluru
-                      var marker = new google.maps.Marker({position: uluru, map: map});
-                    }
-                </script>
-                <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDdvegTh5ElrkIg0z4CERB59LIElU09-g&callback=initMap">
-                </script>
-           </div> --> 
+        
     
            <section class="contact-us" id="contact-us">
             <div class="container">
@@ -536,7 +520,7 @@
 
 
 
-           <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+          
              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

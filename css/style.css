@@ -68,6 +68,7 @@ html {
       font-size: 100%; } }
 
 body {
+  padding-top: 4.8rem;
   overflow-x: hidden;
   scroll-behavior: smooth;
   box-sizing: border-box; }
@@ -146,8 +147,7 @@ h2:after {
       height: 31rem; } }
   .features-card__img {
     width: 100%;
-    height: 15rem;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%); }
+    height: 15rem; }
     @media screen and (min-width: 48em) {
       .features-card__img {
         height: 15rem; } }
@@ -459,7 +459,7 @@ button.accordion::after {
   margin-left: 5px; }
 
 .hero {
-  background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/driving-schools-ashford-hero.jpg);
+  background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/driving-schools-ashford-hero-min.jpg);
   clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 0% 100%);
   height: 85vh;
   position: relative;
@@ -467,10 +467,10 @@ button.accordion::after {
   background-position: center; }
   @media screen and (min-width: 48em) {
     .hero {
-      background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 60%, transparent 100%), url(img/driving-schools-ashford-hero.jpg);
+      background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 60%, transparent 100%), url(img/driving-schools-ashford-hero-min.jpg);
       clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%); } }
   .hero--intensive {
-    background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/road.jpg);
+    background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/road-min.jpg);
     clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 0% 100%);
     height: 85vh;
     position: relative;
@@ -478,10 +478,10 @@ button.accordion::after {
     background-position: center; }
     @media screen and (min-width: 48em) {
       .hero--intensive {
-        background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/road.jpg);
+        background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/road-min.jpg);
         clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%); } }
   .hero--book {
-    background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/fiesta.jpg);
+    background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/fiesta-min.jpg);
     clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 0% 100%);
     height: 85vh;
     position: relative;
@@ -489,7 +489,7 @@ button.accordion::after {
     background-position: center; }
     @media screen and (min-width: 48em) {
       .hero--book {
-        background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/fiesta.jpg);
+        background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/fiesta-min.jpg);
         clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%); } }
   .hero__text-box {
     top: 7%;
@@ -509,7 +509,7 @@ button.accordion::after {
         max-width: 60%;
         position: absolute;
         margin: 2rem;
-        top: 40%;
+        top: 35%;
         transform: translateY(-50%); } }
   .hero__text-box h1 {
     font-size: 275%; }
@@ -641,7 +641,7 @@ footer h5 {
     padding-top: 5rem; }
   .testomonials__background {
     width: 100%;
-    background-image: url(img/car-overlay.jpg);
+    background-image: url(img/car-overlay-min.jpg);
     top: 0;
     left: 0;
     background-size: cover;

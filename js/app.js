@@ -92,7 +92,7 @@ function nextQuest(){
         document.getElementById("submit").style.display='none'
         displayResult();
         bullets[bullets.length-1].classList.add("last");
-        console.log(bullets[bullets.length-1])
+       
         
     }
     else {

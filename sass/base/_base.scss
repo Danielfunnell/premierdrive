@@ -49,3 +49,8 @@ span{
     height:2rem;
     color: $primary;
 }
+
+.inset {
+    -webkit-box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.12);
+    box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.12);
+}

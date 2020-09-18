@@ -11,11 +11,11 @@
     padding-bottom: 1rem;
 
     @include respond(tab-port) {
-        height: 35rem;
+        height: 30rem;
     }
 
     @include respond(tab-land) {
-        height: 32rem;
+        height: 30rem;
     }
 
     @include respond(desktop) {
@@ -28,7 +28,11 @@
         
 
         @include respond(tab-port) {
-            height: 15rem;
+            height: 10rem;
+        }
+
+        @include respond(tab-land) {
+            height: 13rem;
         }
     }
 

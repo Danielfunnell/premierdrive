@@ -187,10 +187,10 @@ h2:after {
   padding-bottom: 1rem; }
   @media screen and (min-width: 48em) {
     .features-card {
-      height: 35rem; } }
+      height: 30rem; } }
   @media screen and (min-width: 62em) {
     .features-card {
-      height: 32rem; } }
+      height: 30rem; } }
   @media screen and (min-width: 75em) {
     .features-card {
       height: 31rem; } }
@@ -199,7 +199,10 @@ h2:after {
     height: 15rem; }
     @media screen and (min-width: 48em) {
       .features-card__img {
-        height: 15rem; } }
+        height: 10rem; } }
+    @media screen and (min-width: 62em) {
+      .features-card__img {
+        height: 13rem; } }
   .features-card__heading {
     margin-top: 2.8rem; }
   .features-card__text-box {
@@ -294,7 +297,7 @@ h2:after {
   z-index: 999; }
 
 .form-button {
-  border: 1.5px solid #d20804;
+  border: 2px solid #d20804;
   background-color: #d20804;
   border-radius: 0rem .3rem .3rem 0rem; }
 
@@ -523,18 +526,25 @@ button.accordion::after {
 .para-side-picture {
   position: relative; }
   .para-side-picture__text-box {
-    padding: 3rem 0;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(0%, -50%); }
+    margin-bottom: 2rem;
+    position: relative; }
+    @media screen and (min-width: 48em) {
+      .para-side-picture__text-box {
+        padding: 3rem 0;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, -50%); } }
   .para-side-picture__image-box {
     width: 2rem;
     padding: 5rem 0; }
   .para-side-picture__image {
-    width: 20rem;
-    margin: 0 5rem 0 5rem; }
+    width: 20rem; }
+    @media screen and (min-width: 48em) {
+      .para-side-picture__image {
+        width: 20rem;
+        margin: 0 5rem 0 5rem; } }
 
 .hero {
   background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/driving-schools-ashford-hero-min.jpg);
@@ -548,7 +558,7 @@ button.accordion::after {
       background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 60%, transparent 100%), url(img/driving-schools-ashford-hero-min.jpg);
       clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%); } }
   .hero--intensive {
-    background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/road-min.jpg);
+    background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/clock.jpg);
     clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 0% 100%);
     height: 85vh;
     position: relative;
@@ -556,7 +566,7 @@ button.accordion::after {
     background-position: center; }
     @media screen and (min-width: 48em) {
       .hero--intensive {
-        background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/road-min.jpg);
+        background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/clock.jpg);
         clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%); } }
   .hero--book {
     background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/fiesta-min.jpg);
@@ -581,11 +591,21 @@ button.accordion::after {
         background-image: linear-gradient(103deg, rgba(43, 48, 58, 0.9999) 35%, rgba(43, 48, 58, 0.8) 70%, transparent 100%), url(img/person-driving.jpg);
         clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%); } }
   .hero__text-box {
-    top: 7%;
+    top: 2%;
     color: rgba(255, 255, 255, 0.726);
     position: absolute;
     margin: 0 auto;
     padding: 1rem; }
+    .hero__text-box--vertical-align {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 350%; }
+    @media screen and (min-width: 23em) {
+      .hero__text-box {
+        top: 6%; } }
     @media screen and (min-width: 48em) {
       .hero__text-box {
         text-align: left;
@@ -659,7 +679,8 @@ footer {
     footer {
       padding: 5rem 0; } }
   footer .footer__menu {
-    list-style: none; }
+    list-style: none;
+    margin-bottom: 2rem; }
   footer .footer__list {
     padding: .3rem;
     font-size: 120%; }
@@ -718,33 +739,33 @@ footer h5 {
     padding-top: 5rem; }
   .testomonials__background {
     width: 100%;
-    background-image: url(img/car-overlay-min.jpg);
+    background-image: url(img/car-overlay-mobile.jpg);
     top: 0;
     left: 0;
-    background-size: cover;
     background-position: left;
     text-align: center;
     padding-bottom: 3.5rem;
     transition: all ease-out; }
+    @media screen and (min-width: 48em) {
+      .testomonials__background {
+        background-image: url(img/car-overlay-min.jpg);
+        background-size: cover; } }
 
 .why-us {
   text-align: center;
-  background-image: linear-gradient(177deg, rgba(43, 48, 58, 0.9) 0%, rgba(43, 48, 58, 0.9) 67%, transparent 65%);
+  background-image: linear-gradient(175deg, rgba(43, 48, 58, 0.9) 0%, rgba(43, 48, 58, 0.9) 67%, transparent 67.88%);
   position: relative;
   display: block; }
   @media screen and (min-width: 62em) {
     .why-us {
-      text-align: center;
-      background-image: linear-gradient(175deg, rgba(43, 48, 58, 0.9) 82%, rgba(43, 48, 58, 0.9) 79.9%, transparent 83%);
-      position: relative; } }
+      background-image: linear-gradient(175deg, rgba(43, 48, 58, 0.9) 82%, rgba(43, 48, 58, 0.9) 79.9%, transparent 83%); } }
   .why-us__icon-container {
     text-align: center;
     width: 100%;
     margin: 4rem 2rem; }
     @media screen and (min-width: 62em) {
       .why-us__icon-container {
-        margin: 2rem 2rem 6rem 2rem;
-        width: 100%; } }
+        margin: 2rem 2rem 6rem 2rem; } }
   .why-us__icon-para {
     text-align: left;
     margin-left: 40px;
@@ -756,7 +777,8 @@ footer h5 {
     position: relative;
     width: auto;
     height: 20rem;
-    margin-top: 4rem; }
+    margin-top: 4rem;
+    border-radius: 50rem; }
     @media screen and (min-width: 62em) {
       .why-us__img {
         border-radius: 50rem;
@@ -771,9 +793,8 @@ footer h5 {
   background-color: #f9f9f9;
   margin-bottom: 5rem; }
 
-#map {
-  height: 20rem;
-  background-color: #fff; }
+iframe {
+  width: 100%; }
 
 .contact-us {
   position: relative;

@@ -11,11 +11,13 @@ footer {
 
 .footer__menu{
     list-style: none;
+    margin-bottom: 2rem;
 }
 
 .footer__list{
     padding:.3rem;
     font-size: 120%;
+    
     
     a{
        color:$color-silver;

@@ -38,24 +38,17 @@
 
 .why-us {
     text-align: center;
-    background-image: linear-gradient(180deg,
+    background-image: linear-gradient(177deg,
         rgba($color-secondary, 0.9) 0%,
         rgba($color-secondary, 0.9) 67%,
         transparent 65%);
     position: relative;
     display:block;
-    
-    animation-name: jsamin1; /*calls the keyframe*/
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-    
-    
+
+
     @include respond(tab-land) {
         text-align: center;
-        background-image: linear-gradient(130deg,
-        rgba($color-secondary, 0.9) 0%,
-        rgba($color-secondary, 0.9) 52.9%,
-        transparent 53%);
+        background-image: linear-gradient(175deg, rgba(43, 48, 58, 0.9) 82%, rgba(43, 48, 58, 0.9) 79.9%, transparent 83%);
         position: relative;
     }
 
@@ -66,7 +59,7 @@
         
 
         @include respond(tab-land) {
-            margin: 4rem 0;
+            margin: 2rem 2rem 6rem 2rem;
             width:100%;
         }
     }
@@ -91,10 +84,10 @@
     
         
         @include respond(tab-land) {
-            border-radius: 13rem 0 0 0;
+            border-radius: 50rem;
             position: absolute;
-            bottom:0;
-            right:0;
+            bottom:-1rem;
+            right:10%;
             height:auto;
         }
     }
@@ -140,4 +133,59 @@
         clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
     }
 }
+
+.areas-covered {
+        background-color: transparent;
+        position: relative;
+        overflow: hidden;
+   
+
+    &__map{
+        margin: 3rem 0;
+        
+    }
+
+    &__side {
+        margin: 3rem 0;
+        background-color: $color-light-grey;
+        padding: 1rem;
+        border-radius: .3rem;
+    }
+
+
+    &__weekly{
+        list-style: none;
+
+        i {
+            color: #ff5252;
+            font-size: 1.3rem
+        }
+        
+    }
+
+    &__intensive{
+        list-style: none;
+
+        i {
+            color: #0288d1;
+            font-size: 1.3rem
+        }
+        
+    }
+
+
+}
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+
+
 

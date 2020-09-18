@@ -9,7 +9,18 @@ footer {
         padding: 5rem 0;
     }
 
+.footer__menu{
+    list-style: none;
+}
 
+.footer__list{
+    padding:.3rem;
+    font-size: 120%;
+    
+    a{
+       color:$color-silver;
+    }
+}
 
 .icon-small--footer {
     color: $color-silver;
@@ -26,61 +37,16 @@ footer {
     display:block;
 }
 
-.contact-footer {
-    position: relative;
-    padding: .1rem;
-    text-align: left;
-    
-
-    &__icon {
-        position: absolute;
-        font-size: 1.5rem;
-        line-height: 120%;
-        top:-.3rem;
-        left:0;
-
-    }
-
-    &__icon--mobile {
-        margin-left: .1rem;
-        position: absolute;
-        font-size: 1.5rem;
-        line-height: 120%;
-        top:-.3rem;
-        left:0;
-    }
-
-    &__individual {
-        width:100%;
-        position: relative;
-        margin-bottom: .5rem;
-        padding: 0 1rem;
-
-       
-    }
-
-    &__individual:first-child {
-        margin-top:1rem;
-    }
-
-    &__para {
-        margin-left: 1.5rem;
-        display: inline-block;
-    }
-
-    
 
 }
 
-    .footer__bottom {
-            background-color: #23272f;
-            position: absolute;
-            bottom:0;
-            right:0;
-            border-radius: 3px;
-            padding: 1rem 1rem;
-        }
-    
+.footer__bottom {
+    background-color: #23272f;
+    position: absolute;
+    bottom:0;
+    right:0;
+    border-radius: 3px;
+    padding: 1rem 1rem;
 }
 
 footer h5 {
@@ -89,5 +55,17 @@ footer h5 {
 
     @include respond(tab-land) { 
         border-bottom: none;
+    }
+}
+
+.social-links{
+    margin-top: 1rem;
+}
+
+.sub-text-box{
+    
+
+    @include respond(tab-land) { 
+        margin-left: 10rem;
     }
 }

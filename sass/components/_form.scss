@@ -28,5 +28,20 @@
 
 }
 
+.sub-input{
+    border-radius: .3rem 0rem 0rem .3rem;
+    width: 70%;
+    height: calc(1.5em + 1rem + 2px);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    z-index:999;
+}
+
+.form-button {
+    border: 1.5px solid $primary;
+    background-color: $primary;
+    border-radius: 0rem .3rem .3rem 0rem;
+}
+
 
 

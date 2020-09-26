@@ -1,58 +1,77 @@
-import fetch from 'isomorphic-unfetch';
+const request = require("request");
 
-exports.handler = async (event, context, callback) => {
-  const { email } = JSON.parse(event.body);
+const mailChimpAPI = process.env.MAILCHIMP_API_KEY;
+const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
+const mcRegion = process.env.MAILCHIMP_REGION;
 
-  if (!email) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({
-        error: 'Email is required'
-      })
-    };
-  }
+module.exports.handler = (event, context, callback) => {
 
-  try {
-    const LIST_ID = process.env.MAILCHIMP_LIST_ID;
-    const API_KEY = process.env.MAILCHIMP_API_KEY;
-    const DATACENTER = process.env.MAILCHIMP_DATACENTER;
+    const formData = JSON.parse(event.body);
+    const email = formData.email;
+    let errorMessage = null;
+
+    if (!formData) {
+        errorMessage = "No form data supplied";
+        console.log(errorMessage);
+        callback(errorMessage);
+    }
+
+    if (!email) {
+        errorMessage = "No EMAIL supplied";
+        console.log(errorMessage);
+        callback(errorMessage);
+    }
+
+    if (!mailChimpListID) {
+        errorMessage = "No LIST_ID supplied";
+        console.log(errorMessage);
+        callback(errorMessage);
+    }
 
     const data = {
-      email_address: email,
-      status: 'subscribed'
+        email_address: email,
+        status: "subscribed",
+        merge_fields: {}
     };
 
-    const response = await fetch(
-      `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${LIST_ID}`,
-      {
-        body: JSON.stringify(data),
+    const subscriber = JSON.stringify(data);
+    console.log("Sending data to mailchimp", subscriber);
+
+    request({
+        method: "POST",
+        url: `https://${mcRegion}.api.mailchimp.com/3.0/lists/${mailChimpListID}/members`,
+        body: subscriber,
         headers: {
-          Authorization: `Daniel1:${API_KEY}-${DATACENTER}`,
-          'Content-Type': 'application/json'
-        },
-        method: 'POST'
-      }
-    );
+            "Authorization": `apikey ${mailChimpAPI}`,
+            "Content-Type": "application/json"
+        }
+    }, (error, response, body) => {
+        if (error) {
+            callback(error, null)
+        }
+        const bodyObj = JSON.parse(body);
 
-    if (response.status >= 400) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({
-          error: `There was an error subscribing to the newsletter. Shoot me an email at [me@leerob.io] and I'll add you to the list.`
-        })
-      };
-    }
-  } catch (error) {
-    return {
-      statusCode: error.statusCode || 500,
-      body: JSON.stringify({
-        error: error.message || error.toString()
-      })
-    };
-  }
+        console.log("Mailchimp body: " + JSON.stringify(bodyObj));
+        console.log("Status Code: " + response.statusCode);
 
-  return {
-    statusCode: 201,
-    body: JSON.stringify({ error: '' })
-  };
-};
+        if (response.statusCode < 300 || (bodyObj.status === 400 && bodyObj.title === "Member Exists")) {
+            console.log("Added to list in Mailchimp subscriber list");
+            callback(null, {
+                statusCode: 201,
+                headers: {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Credentials": "true"
+                },
+                body: JSON.stringify({
+                    status: "saved email"
+                })
+            })
+        } else {
+            console.log("Error from mailchimp", bodyObj.detail);
+            callback(bodyObj.detail, null);
+        }
+
+    });
+    
+}

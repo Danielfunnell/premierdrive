@@ -11,9 +11,7 @@
     "concat:css": "concat -o css/style.concat.css Vendor/css/ionicons.min.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
-    "lambda-serve": "netlify-lambda serve functions",
-    "lambda-build": "netlify-lambda build functions"
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
   "author": "",
   "license": "ISC",
@@ -25,8 +23,6 @@
     "postcss-cli": "^7.1.1"
   },
   "dependencies": {
-    "axios": "^0.20.0",
-    "bootstrap": "^4.5.0",
-    "netlify-lambda": "^2.0.1"
+    "bootstrap": "^4.5.0"
   }
 }

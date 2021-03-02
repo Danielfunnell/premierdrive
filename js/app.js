@@ -1,26 +1,8 @@
-const questDiv= document.getElementById("question-container");
-const questionBox= document.querySelector(".question-box")
-const resultsContainer = document.getElementById("results");
+// Questions array
 
-let formOne = document.getElementById("form").addEventListener("submit", handleform)
-
-function handleform(event) {
-    event.preventDefault();
-    form.parentNode.removeChild(form);
-    renderQuestion();
-}
-
-const next= document.querySelector(".next-button");
-const submit = document.getElementById("submit").addEventListener("click", getResults);
-const bullets= [...document.querySelectorAll(".question-box__bullet")];
-
-
-
-
-
-let questions = [
+const questions = [
     {
-        question: "How many hours have you has previously with  a driving instructor?",
+        question: "How many hours have you has previously with a driving instructor?",
         choiceA: "0-15 hours", 
         choiceB: "15-30",
         choiceC: "30-above"
@@ -42,43 +24,59 @@ let questions = [
         choiceA: "No",
         choiceB: "Occasionally",
         choiceC: "Yes"
-    }
+    },
 ];
 
-let score = 0
+// Selectors
+
+const questDiv= document.getElementById("question-container");
+const questionBox= document.querySelector(".question-box")
+const resultsContainer = document.getElementById("results");
+const next= document.querySelector(".next-button");
+const submit = document.getElementById("submit").addEventListener("click", getValues);
+const bullets= [...document.querySelectorAll(".question-box__bullet")];
+const formOne = document.getElementById("form").addEventListener("submit", handleform)
+
+let name = {};
+
+let score = 0;
 let maxSteps = questions.length;
 let currentStep = 1;
 let lastQuestionIndex = questions.length -1; 
 let runningQuestionIndex = 0;
-const questOne = questions[1];
 
+// Form Handler
+
+function handleform(event) {
+    event.preventDefault();
+    name = document.getElementById('first-name').value
+    form.parentNode.removeChild(form);
+    renderQuestion();
+}
+
+// Starts Quiz
 
 quizStart();
     
-function quizStart (event) {
-    //  event.preventDefault()
-   
+function quizStart () {
     next.style.display='none';
     questionBox.style.display = 'none'
-    
 }
-//renderQuestion();
 
 
+// Displays current question and options
 function renderQuestion() {
         
         questionBox.style.display = 'block';
         next.style.display ='block';
 
         let q = questions[runningQuestionIndex];
+
         questDiv.innerHTML += `<h4 class="question-box__question"> ${q.question} </h4>`;
         questDiv.innerHTML += `<label><input class="input-btn" type="radio" name="answer-btn" id="A" value="start">${q.choiceA}</label></br>`
         questDiv.innerHTML += `<label><input class="input-btn" type="radio" name="answer-btn" id="B" value="middle">${q.choiceB}</label><br>`
         questDiv.innerHTML += `<label><input class="input-btn" type="radio" name="answer-btn" id="C" value="end">${q.choiceC}</label><br>`        
-        
 };
-
-
 
 
 function nextQuest(){
@@ -105,12 +103,11 @@ function nextQuest(){
 }    
 
 
-
-
- function getResults() {
+// Gets radio buttons value and adds to score
+ function getValues() {
    document.getElementsByName("answer-btn")
     .forEach(radio => {
-           
+            
         
             if ((radio.checked) && (radio.value === "start")) {
                 score = score -1; 
@@ -124,32 +121,23 @@ function nextQuest(){
                 score = score +1
                 nextQuest()
                 console.log(score)
-                
             }
-
-            
         });
-
-        
 };
 
 
-
-
-
-
-
+// Displays final result in results container
 function displayResult() {
 
     if (score < 0) {
-        resultsContainer.innerHTML =`<h4> You are a beginner. We recommend our 40 hour beginner course </h4>`;
+        resultsContainer.innerHTML =`<h4> Thanks ${name}. You are a beginner. We recommend our 40 hour beginner course </h4>`;
         console.log("you are a beginner");
     }else if ((score >= 0) && (score <= 3)) {
-        resultsContainer.innerHTML =`<h4> You are a intermediate. We recommend our 20 hour course </h4>`;
+        resultsContainer.innerHTML =`<h4> Thanks ${name}. You are a intermediate. We recommend our 20 hour course </h4>`;
         console.log("you are intermediate");
     }
     else if (score >= 4) {
-        resultsContainer.innerHTML =`<h4> You are advanced. We recommend our 10 hour course </h4>`;
+        resultsContainer.innerHTML =`<h4>Thanks ${name}. You are advanced. We recommend our 10 hour course </h4>`;
         console.log("you are advanced");
     } 
 }
